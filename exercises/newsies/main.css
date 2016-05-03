@@ -1,0 +1,27 @@
+section {
+    display: inline-block;
+    width: 30%; 
+    line-height: 20px; 
+}
+
+h1 {
+    font-family: fantasy; 
+}
+
+h2 {
+    color: orangered; 
+}
+
+body {
+    background-color: beige; 
+}
+
+img {
+    width 700px; 
+    height: 400px;
+    
+}
+
+span {
+    color: red; 
+}

@@ -1,0 +1,27 @@
+h1 {
+    color: darkgreen; 
+    text-align: center; 
+    font-family: Georgia;
+}
+
+h2 {
+    font-family: Georgia; 
+    text-align: center; 
+}
+
+p {
+    line-height: 25px;
+    text-wrap: normal;
+    text-align: 
+}
+
+img {
+    float: left;
+    height: 250px; 
+    width: 280px; 
+    margin: 20px 25px;
+}
+
+a {
+    text-decoration: none;  
+}
