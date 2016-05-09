@@ -1,0 +1,41 @@
+body {
+    background: url("nature-wallpapers-hd-1%202.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 70px;
+}
+
+p {
+    width: 70%;
+    height: auto;
+    margin-left: 10%;
+    border: 4px solid white;
+    padding: 3%;
+    box-sizing: border-box;
+}
+
+.div {
+    margin-left: 10%;
+    color: lightblue;
+    margin-bottom: 10%
+}
+ 
+img {
+    width: 250px;
+    height: auto;
+    margin-left: 10%;
+    float: left; 
+    margin-right: 20px; 
+}

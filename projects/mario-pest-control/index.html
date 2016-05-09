@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mario's Pest Control</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial scale = 1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <img class="img" src="MarioLogo1.gif">
+        </div>
+    </header>
+    <main>
+        <div class="col-lg-3 col-md-5 col-sm-9 col-xs-10 form-group div">
+            <img class="img1 center-block" src="Bob-omb.png">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <label for="usr">Bob-ombs cost:</label>
+                    <input type="text" class="form-control" id="usr bobOmb" value="7 coins" readonly>
+                    <label for="usr">Number of type caught:</label>
+                    <input type="text" class="form-control" id="usr bobOmbs">
+                    <button type="submit" onclick="getCoinsBobOmb()" class="btn-primary btn-lg">Calculate Total</button>
+                    <label for="usr">Total cost:</label>
+                    <input type="text" class="form-control" id="usr bobOmb1" readonly>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-3 col-md-5 col-sm-9 col-xs-10 form-group div">
+            <img class="img1 center-block" src="CheepCheepNSMBU.png">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <label for="usr">Cheep-cheeps cost:</label>
+                    <input type="text" class="form-control" id="usr cheepCheep" value="11 coins" readonly>
+                    <label for="usr">Number of type caught:</label>
+                    <input type="text" class="form-control" id="usr cheepCheeps">
+                    <button type="submit" onclick="getCoinsCheep()" class="btn-primary btn-lg">Calculate Total</button>
+                    <label for="usr">Total cost:</label>
+                    <input type="text" class="form-control" id="usr cheepCheep1" readonly>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-3 col-md-5 col-sm-9 col-xs-10 form-group div">
+            <img class="img1 center-block" src="GoombaNSMB.png">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <label for="usr">Goombas cost:</label>
+                    <input type="text" class="form-control" id="usr goomba" value="5 coins" readonly>
+                    <label for="usr">Number of type caught:</label>
+                    <input type="text" class="form-control" id="usr goombas">
+                    <button onclick="getCoinsGoomba()" type="submit" class="btn-primary btn-lg">Calculate Total</button>
+                    <label for="usr">Total cost:</label>
+                    <input type="text" class="form-control" id="usr goomba1" value="" readonly>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="col-lg-5 col-md-7 col-sm-9 col-xs-12 div div1">
+            <h3>Email: <a href="#">mariotheplumber@world.com</a></h3>
+            <h3>Website: <a href="#">www.mariospestcontrol.com</a></h3>
+            <h3>Address: 12347 Mario World Lane</h3>
+        </div>
+    </footer>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

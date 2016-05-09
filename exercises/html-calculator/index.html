@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>HTML Calculator</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <main>
+            <section>
+                <div>Add</div>
+                <div id="addition">
+                    <button class="btn-primary" onclick="add()">Click To Add</button>
+                    <input id="add1">
+                    <input id="add2">
+                </div>
+            </section>
+            <section>
+                <div>Subtract</div>
+                <div>
+                    <button onclick="subtract()">Click To Subtract</button>
+                    <input id="sub1">
+                    <input id="sub2">
+                    <input id="diffAnswer"> 
+                </div>
+            </section>
+            <section>
+                <div>Multiply</div>
+                <div>
+                    <button onclick="multiply()">Click To Multiply</button>
+                    <input id="mult1">
+                    <input id="mult2">
+                </div>
+            </section>
+            <section>
+                <div>Divide</div>
+                <div>
+                    <button onclick="divide()">Click To Divide</button>
+                    <input id="div1"> 
+                    <input id="div2">
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+ul {
+    text-align: left; 
+}
+
+li {
+    display: inline; 
+    color: skyblue; 
+    border: 3px solid blue;
+    padding: 5px; 
+    cursor: pointer; 
+}
+
+span {
+    text-decoration: underline; 
+    color: dodgerblue; 
+    cursor: pointer; 
+}

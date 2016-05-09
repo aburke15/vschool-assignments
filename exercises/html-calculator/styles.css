@@ -1,0 +1,17 @@
+body {
+    background-color: lightgrey; 
+}
+
+div {
+    margin: 20px; 
+    align-content: center; 
+}
+
+.div1 {
+    display: inline-block; 
+    float: right; 
+}
+
+button {
+    border-radius: 5px;
+}

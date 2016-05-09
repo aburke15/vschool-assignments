@@ -1,0 +1,37 @@
+div {
+    height: 150px;
+    border: 3px solid white; 
+}
+main {  
+    height: 850px; 
+    width: 850px; 
+}
+
+.pink {
+    background-color: #F5C6D6; 
+    width: 792px;
+}
+
+.magenta {
+    background-color: #EE2E84;
+    width: 190.95px; 
+    display: inline-block; 
+}
+
+.blue {
+    width: 393.50px; 
+    background-color: #85CFD8;
+    display: inline-block; 
+}
+
+.green {
+    width: 593.50px; 
+    background-color: #8DC63F;
+    display: inline-block; 
+}
+
+.orange {
+    width: 193.50px; 
+    background-color: #E76E34;
+    display: inline-block; 
+}

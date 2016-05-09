@@ -1,0 +1,44 @@
+.container-fluid {
+    padding-top: 8%; 
+    height: 500px;
+    width: 800px;
+    box-sizing: border-box; 
+}
+
+.pink {
+    box-sizing: border-box; 
+    background-color: #F5C6D6;  
+    height: 150px;
+    border: 5px solid white;
+}
+
+.magenta {
+    box-sizing: border-box; 
+    background-color: #EE2E84;
+    display: inline-block;  
+    border: 5px solid white; 
+    height: 150px;
+}
+
+.blue {
+    box-sizing: border-box;
+    background-color: #85CFD8;
+    display: inline-block; 
+    height: 150px; 
+    border: 5px solid white;
+}
+
+.green {
+    box-sizing: border-box;
+    background-color: #8DC63F;  
+    height: 150px;
+    border: 5px solid white;
+}
+
+.orange {
+    box-sizing: border-box; 
+    background-color: #E76E34;
+    display: inline-block; 
+    border: 5px solid white;
+    height: 150px;
+}

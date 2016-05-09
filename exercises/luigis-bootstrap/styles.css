@@ -1,0 +1,60 @@
+@font-face {
+    font-family: SuperMario256;
+    src: url(SuperMario256.ttf);
+}
+
+.img1 {
+    height: 300px;
+    padding-top: 23px;
+    max-width: 100%;
+}
+
+.container-fluid {
+    height: auto;
+    box-sizing: border-box;
+    width: 60%;
+}
+
+.red {
+    background-color: red;
+    height: 320px;
+}
+
+.yellow {
+    background-color: yellow;
+    height: 80px;
+    color: red;
+    font-family: SuperMario256;
+    font-size: 45px;
+}
+
+h1 {
+    font-family: SuperMario256;
+    text-align: center;
+}
+
+h2 {
+    padding-left: 60px;
+    font-size: 40px;
+}
+
+h4 {
+    text-align: center;
+    font-size: 20px;
+    line-height: inherit;
+}
+
+.white {
+    height: 225px;
+    color: red;
+}
+
+.yellow-thin {
+    background-color: yellow;
+    height: 70px;
+}
+
+.img2 {
+    height: 70px;
+    float: right;
+}
