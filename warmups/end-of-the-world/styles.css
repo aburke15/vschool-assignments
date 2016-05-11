@@ -1,0 +1,33 @@
+body {
+    background: url("maxresdefault%202.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container-fluid {
+    height: 600px; 
+    max-width: 70%;
+    margin-top: 10%; 
+}
+
+.div {
+    height: 200px; 
+    width: 100%; 
+    background-color: white; 
+    margin-bottom: 23%;
+    opacity: 0.5; 
+    border: 2px solid black; 
+    border-radius: 15px; 
+}
+
+h1 {
+    text-align: center; 
+    color: red; 
+}
+
+h2 {
+    text-align: center;
+    color: orangered;  
+}

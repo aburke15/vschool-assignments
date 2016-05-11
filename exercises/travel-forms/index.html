@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Travel Form</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <form class="form-group" name="myTravelForm" action="">
+            <fieldset>
+                <legend>Personal Info:</legend>
+                <div class="info">
+                    <label for="firstName">First Name:</label>
+                    <input name="firstName" class="form-control" type="text" value="">
+
+                    <label for="lastName">Last Name:</label>
+                    <input name="lastName" class="form-control" type="text" value="">
+
+                    <label for="age">Age:</label>
+                    <input name="age" class="form-control" type="number" value="">
+                </div>
+
+
+                <div class="gender">
+                    <br>
+                    <label for="gender">Gender:</label>
+                    <br>
+                    <input name="gender" type="radio" value="Male"> Male<br>
+                    <input name="gender" type="radio" value="Female"> Female<br>
+                    <input name="gender" type="radio" value="Other"> Other<br>
+                </div>
+
+                <div class="travel">
+                    <br>
+                    <label for="travelingTo">Where are you traveling?</label>
+                    <select class="form-control" name="travelingTo">
+                        <option selected="Select">Select...</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Italy">Italy</option>
+                        <option value="London">London</option>
+                    </select>
+                </div>
+
+                <div class="dietary">
+                    <br>
+                    <label for="dietary">Do you have dietary restrictions?</label>
+                    <br>
+                    <input name="vegetarian" type="checkbox" value="Vegetarian"> Vegetarian
+                    <br>
+                    <input name="diet" type="checkbox" value="Kosher"> Kosher<br>
+                    
+                    <input name="diet" type="checkbox" value="Lactose free"> Lactose free<br>
+                    
+                    <input name="diet" type="checkbox" value="Only meat"> Only meat<br>
+                    <br>
+                    <button type="button" onclick="processForm()" id="personal" class="btn btn-default center-block">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+
+</html>
