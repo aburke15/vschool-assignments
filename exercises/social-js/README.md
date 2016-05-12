@@ -1,3 +1,6 @@
+Exercise requirements 
+=====================
+
 Create a model to represent the database of a new social media platform you're creating. 
 
 It can be about whatever you want, but it needs the following:
