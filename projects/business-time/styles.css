@@ -1,0 +1,104 @@
+@media (min-width: 701px) {
+    .marginLeft {
+        margin-left: 7%;
+    }
+}
+
+@media (min-width: 700px) and (min-width: 1199px) {
+    .marginLeft2 {
+        margin-left: 7%;
+    }
+}
+
+body {
+    background: url("techimg.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container-fluid {
+    max-width: 95%;
+}
+
+.divIndex {
+    height: 580px;
+    background-color: lightgrey;
+    border: 2px solid white;
+    border-radius: 10px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+.divIndex1 {
+    height: 900px;
+    background-color: lightgrey;
+    border: 2px solid white;
+    border-radius: 10px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    max-width: 90%;
+    box-sizing: border-box;
+}
+
+main {
+    margin-top: 80px;
+}
+
+img {
+    height: 250px;
+    width: 100%;
+    float: left;
+    border-radius: 10px;
+}
+
+h1 {
+    color: black;
+}
+
+.center {
+    text-align: center;
+    color: lightgrey;
+    font-family: monospace;
+    font-size: 70px;
+}
+
+h3 {
+    color: lightgrey;
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.paddingTop {
+    padding-top: 17px;
+    box-sizing: border-box;
+}
+
+.img {
+    margin-top: 17px;
+    height: 300px;
+    width: 300px;
+    float: left;
+    border-radius: 10px;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 27px;
+}
+
+.spacing {
+    margin-left: 5%;
+}
+
+.img1 {
+    margin-top: 17px;
+    height: 300px;
+    width: 100%; 
+    float: left;
+    border-radius: 10px;
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 27px;
+}

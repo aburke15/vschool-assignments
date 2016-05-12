@@ -6,7 +6,7 @@ var action = "";
 var playerHealth = 30;
 var itemInventory = [];
 var monsterArray = ["Undead", "Vampire", "Dragon"];
-var itemsArray = ["Bow", "Arrows", "Gold Coins", "Armor", "Helmet", "Extra Health", "Steel Longsword", "Buckler", "Ultra Great Sword", "Poition", "Magic Scrolls", ];
+var itemsArray = ["Bow", "Arrows", "Gold Coins", "Armor", "Helmet", "Steel Longsword", "Buckler", "Ultra Great Sword", "Poition", "Magic Scrolls", ];
 console.log();
 console.log();
 
