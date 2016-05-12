@@ -82,9 +82,6 @@ function printItems(input) {
         for (var i = 0; i < itemInventory.length; i++) {
             items = itemInventory[i] + " ";
         }
-        if (itemInventory.indexOf("Extra Health")) {
-            playerHealth = playerHealth + 15;
-        }
         console.log("inventory:");
         console.log(itemInventory);
         console.log();
@@ -103,7 +100,7 @@ function health(input) {
     }
 }
 
-function hitPoinsZero(health) {
+function hitPoinsZero() {
     if (playerHealth <= 0) {
         console.log();
         console.log("End Of Game");
@@ -118,16 +115,13 @@ function exceptionsInput(input) {
 }
 
 function levelUp() {
-    if (count === 7) {
+    if (count === 5) {
         level++;
         console.log();
         console.log("You have gained a level! You are now level " + level + "!");
-        playerHealth = playerHealth + 10;
+        console.log(); 
+        console.log("You gained 20 points of health."); 
+        playerHealth = playerHealth + 20;
         count = 0;
     }
 }
-//function exceptionsAction(action) {
-//    if (action !== "f" && action !== "r") {
-//        console.log("Please enter either 'f' or 'r' to continue."); 
-//    }
-//}
