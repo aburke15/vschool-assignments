@@ -2,17 +2,10 @@ var messageArray = ["Yeah! That's right!", "You got nothin' on me!", "Eat my sho
 var randomMessage = Math.floor(Math.random() * messageArray.length);
 var trashTralk = messageArray[randomMessage];
 
-var numInput = document.querySelector("input");
-
-numInput.addEventListener("input", function() {
-    var num = this.value.match(/^\d+$/);
-    if (num === null) {
-        this.value = "";
-    }
-}, false);
+var button = $("#button");
 
 button.click(function() {
     var name = $("#name").val();
     console.log(name);
-    $("#row tr:last").after("<tr><td>#name</td> <td>text</td> <td>text</td> <td>text</td></tr>");
+    $("#row tr:last").after("<tr><td>#name</td><td>text</td><td>text</td><td>text</td></tr>");
 });
