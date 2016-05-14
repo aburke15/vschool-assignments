@@ -9,3 +9,4 @@ button.click(function() {
     console.log(name);
     $("#row tr:last").after("<tr><td>#name</td><td>text</td><td>text</td><td>text</td></tr>");
 });
+
