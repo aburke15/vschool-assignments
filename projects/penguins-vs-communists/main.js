@@ -77,6 +77,7 @@ function game() {
             console.log("The Communists have been exterminated.");
             console.log();
         }
+        
     }, 500);
 }
 
