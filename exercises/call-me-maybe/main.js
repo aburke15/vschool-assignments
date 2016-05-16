@@ -7,7 +7,7 @@ function attemptCall(name, dontCall, call, sendText) {
     if (numOfAs > 1) {
         sendText(name);  
     } else if (name.length % 2 === 0) {
-        call(name); 
+        call(name);  
     } else {
          dontCall(name); 
     }

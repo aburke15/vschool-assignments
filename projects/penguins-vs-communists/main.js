@@ -1,50 +1,48 @@
-var attacksFirst = Math.floor(Math.random() * 2) + 1;
-
-function Party() {
+function Parties(party) {
     this.population = 1000000000;
-    if (attacksFirst === 1) {
-        this.party = "Penguins";
-    } else {
-        this.party = "Communists";
-    }
+    this.party = party;
 }
 
-var parties = new Party();
-console.log(parties);
+var penguins = new Parties("Penguins");
 
-//var penguins = new Party("Penguins");
-////console.log(penguins); 
-//
-//var communists = new Party("Communists");
-////console.log(communists); 
+var communists = new Parties("Communists");
 
+var firstAttack = Math.floor(Math.random() * 2) + 1;
 
+var party = "";
 
-//console.log(attacksFirst); 
+if (firstAttack === 1) {
+    party = penguins.party;
+} else {
+    party = communists.party;
+}
 
 function sendNuke(party, onHit, onMiss) {
-    if (attacksFirst === 1) {
-        console.log("The " + party + " will be attacked.");
+    console.log("The " + party + " will be the first to attack.");
+    var randomAttack = Math.floor(Math.random() * 3) + 1; 
+    if (randomAttack === 3) {
+        onHit(party); 
     } else {
-        console.log("The " + party + " will be attacked.");
+        onMiss(party); 
     }
-    var hitOrMiss = Math.floor(Math.random() * 3) + 1;
-    if (hitOrMiss === 3) {
-        onHit();
-    } else {
-        onMiss();
-    }
-    var randomDamage = Math.floor(Math.random() * 90000) + 25000;
-    //console.log(randomDamage); 
 }
 
 function onHit(party) {
-    console.log("The attack was successful!");
+    console.log("The attack was successful, the " + party + " hit them head on!"); 
+    var randomDamage = Math.floor(Math.random() * 150000) + 100000; 
+    
+    if (party === "Penguins") {
+        communists.population = communists.population - randomDamage; 
+        console.log("The Communists lost " + randomDamage + " of their population."); 
+        console.log(communists.population); 
+    } else {
+        communists.population = communists.population - randomDamage; 
+        console.log("The Communists lost " + randomDamage + " of their population.");
+    }
 }
 
 function onMiss(party) {
-    console.log("The attack was unsuccessful!");
+    console.log("The attack missed, the " + party + " are proving to be quite distasteful..."); 
 }
 
-
-sendNuke(party, onHit, onMiss);
+sendNuke(party, onHit, onMiss); 
