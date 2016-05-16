@@ -1,18 +1,38 @@
-function Party(party) {
-    this.population = 1000000000;
-    this.party = party;
+var attacksFirst = Math.floor(Math.random() * 2) + 1;
+
+function Party() {
+    this.population = 1000000000; 
+    if (attacksFirst === 1) {
+        this.party = "Penguins"; 
+    } else {
+        this.party = "Communists"; 
+    }
+    onHit(this.party); 
+    onMiss(this.party); 
 }
 
-var penguins = new Party("Penguins");
-//console.log(penguins); 
+var parties = new Party(); 
+console.log(parties); 
 
-var communists = new Party("Communists");
-//console.log(communists); 
+//var penguins = new Party("Penguins");
+////console.log(penguins); 
+//
+//var communists = new Party("Communists");
+////console.log(communists); 
 
-var attacksFirst = Math.floor(Math.random() * 2) + 1;
+
 
 //console.log(attacksFirst); 
 
+function onHit(party) {
+    sendNuke(party);
+    console.log("The attack was successful!");
+}
+
+function onMiss(party) {
+    sendNuke(party);
+    console.log("The attack was unsuccessful!");
+}
 
 function sendNuke(party, onHit, onMiss) {
     if (attacksFirst === 1) {
@@ -21,19 +41,14 @@ function sendNuke(party, onHit, onMiss) {
         console.log("The " + party + " will be attacked.");
     }
     var hitOrMiss = Math.floor(Math.random() * 3) + 1;
-    //console.log(hitOrMiss); 
+    if (hitOrMiss === 3) {
+        onHit();   
+    } else {
+        onMiss();  
+    }
     var randomDamage = Math.floor(Math.random() * 90000) + 25000;
     //console.log(randomDamage); 
 }
 
-function onHit(party) {
-    sendNuke(party);
-}
 
-function onMiss(party) {
-    sendNuke(party);
-}
-
-if (attacksFirst === 1) {
-    
-}
+sendNuke(party, onHit, onMiss); 
