@@ -1,18 +1,16 @@
 var attacksFirst = Math.floor(Math.random() * 2) + 1;
 
 function Party() {
-    this.population = 1000000000; 
+    this.population = 1000000000;
     if (attacksFirst === 1) {
-        this.party = "Penguins"; 
+        this.party = "Penguins";
     } else {
-        this.party = "Communists"; 
+        this.party = "Communists";
     }
-    onHit(this.party); 
-    onMiss(this.party); 
 }
 
-var parties = new Party(); 
-console.log(parties); 
+var parties = new Party();
+console.log(parties);
 
 //var penguins = new Party("Penguins");
 ////console.log(penguins); 
@@ -24,16 +22,6 @@ console.log(parties);
 
 //console.log(attacksFirst); 
 
-function onHit(party) {
-    sendNuke(party);
-    console.log("The attack was successful!");
-}
-
-function onMiss(party) {
-    sendNuke(party);
-    console.log("The attack was unsuccessful!");
-}
-
 function sendNuke(party, onHit, onMiss) {
     if (attacksFirst === 1) {
         console.log("The " + party + " will be attacked.");
@@ -42,13 +30,21 @@ function sendNuke(party, onHit, onMiss) {
     }
     var hitOrMiss = Math.floor(Math.random() * 3) + 1;
     if (hitOrMiss === 3) {
-        onHit();   
+        onHit();
     } else {
-        onMiss();  
+        onMiss();
     }
     var randomDamage = Math.floor(Math.random() * 90000) + 25000;
     //console.log(randomDamage); 
 }
 
+function onHit(party) {
+    console.log("The attack was successful!");
+}
 
-sendNuke(party, onHit, onMiss); 
+function onMiss(party) {
+    console.log("The attack was unsuccessful!");
+}
+
+
+sendNuke(party, onHit, onMiss);
