@@ -10,7 +10,7 @@
 
 <body>
     <section class="section1 section center-block">
-        <form class="form-group" name="myAsteroidScores" action="">
+        <form id="form" class="form-group" name="myAsteroidScores" action="">
             <fieldset>
                 <legend>Asteroids High Scores!</legend>
                 <label for="name">Name:</label>
@@ -22,10 +22,10 @@
 
                 <label for="message">Add random trash talk message?</label>
                 <br>
-                <input class="" id="message" name="message" value="yes" type="radio"> Yes
+                <input id="message" name="message" value="yes" type="radio"> Yes
                 <br>
                 <br>
-                <input class="" id="message" name="message" value="no" type="radio"> No
+                <input checked="checked" id="message" name="message" value="no" type="radio"> No
                 <br>
                 <hr>
 
@@ -39,24 +39,8 @@
     </section>
 
     <section class="section1 center-block">
-        <table class="table table-striped table-hover active table-condensed table-responsive">
-            <thead>
-                <th>Name:</th>
-                <th>Date:</th>
-                <th>High-score:</th>
-                <th>Message:</th>
-            </thead>
-            <tbody id="row">
-                <tr scope="row">
-                    <td id="name-col"></td>
-                    <td id="date-col"></td>
-                    <td id="high-score-col"></td>
-                    <td id="message-col"></td>
-                </tr>
-            </tbody>
-            <tfoot>
+        <table id="my-table" class="table table-striped table-hover active table-condensed table-responsive">
 
-            </tfoot>
         </table>
     </section>
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>

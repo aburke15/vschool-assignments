@@ -1,4 +1,4 @@
-Project requirements:
+Exercise requirements:
 =====================
 
 Create two parties (Use Javascript function objects using the new keyword to instantiate):
@@ -34,3 +34,10 @@ If an attack is successful initiate a random damage amount
 After an attack is completed (or missed) the opposing party will initiate an attack.
 
 This process will repeat until one of the parties reaches a 0 population
+
+UPDATES:
+======================
+
+using karma, jasmine, phantomjs, and package.json go through and
+
+test the functions from the penguins-vs-communists program
