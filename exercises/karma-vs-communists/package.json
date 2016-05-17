@@ -1,0 +1,21 @@
+{
+  "name": "karma-vs-communists",
+  "version": "1.0.0",
+  "description": "Project requirements: =====================",
+  "main": "main.js",
+  "dependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "package.json": "^1.0.1",
+    "phantomjs-prebuilt": "^2.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
