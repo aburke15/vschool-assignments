@@ -1,0 +1,16 @@
+.poke {
+    border: .5px solid #DDD;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: white;
+}
+
+body {
+    background-color: beige;
+}
+
+.poke:hover {
+    background-color: aquamarine;
+}
