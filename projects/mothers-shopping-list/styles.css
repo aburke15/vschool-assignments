@@ -36,4 +36,5 @@ li {
 
 .glyphicon:hover {
     background-color: crimson; 
+    cursor: pointer; 
 }
