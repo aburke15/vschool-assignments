@@ -33,3 +33,7 @@ li {
     background-color: lightgrey; 
     margin-bottom: 10px; 
 }
+
+.glyphicon:hover {
+    background-color: crimson; 
+}

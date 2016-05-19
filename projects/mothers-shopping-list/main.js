@@ -17,6 +17,7 @@ function appendValue(grocery) {
     reset(); 
 }
 
+// function removes the parent element of the element set for click
 $("#list").on("click", "#remove", function (event) {
     event.preventDefault();
     $(this).parent().remove();
