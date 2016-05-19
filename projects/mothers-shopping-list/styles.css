@@ -1,0 +1,35 @@
+h1 {
+    color: cornflowerblue;
+    text-align: center; 
+}
+
+body {
+    background: url("grocery-store-snacks.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container-fluid {
+    
+    width:  40%; 
+}
+
+.div-align { 
+    color: cornflowerblue;  
+}
+
+li {
+    font-size: 20px; 
+}
+
+.glyphicon {
+    font-size: 1em; 
+    padding: 10px;
+    border: 2px solid white; 
+    box-sizing: border-box; 
+    border-radius: 10px;
+    background-color: lightgrey; 
+    margin-bottom: 10px; 
+}

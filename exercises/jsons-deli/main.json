@@ -1,16 +1,26 @@
 {
-    "menu": 
-    [
-        "Club Sandwich", 
-        "Pizza", 
+    "appetizers": [
+        {
+            "name": "Platter",
+            "ingredients": ["chicken", "celery"],
+            "desription": "This is really yummy.",
+        },
+        {}
+    ],
+    "cold sandwiches": [
+        {},
+        {}
+    ],
+    "hot sandwiches": [
+        {},
+        {}
+    ],
+    "desserts": [
+        {},
+        {}
+    ],
+    "drinks": [
+        {},
+        {}
     ]
-    
-    
-    
-    
 }
-    
-    
-    
-    
-    
