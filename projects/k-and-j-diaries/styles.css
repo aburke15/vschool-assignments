@@ -1,10 +1,10 @@
 .nav-img {
-    margin-top: 14px;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 .header-img {
     width: 100%;
+    height: auto;
 }
 
 .bottom {
@@ -27,42 +27,49 @@
 }
 
 .the-nav {
-    height: 70px;
+    height: 71px;
     width: 100%;
     background-color: white;
     position: fixed;
+    padding-top: 15px;
+    box-sizing: border-box;
 }
 
-.top {}
+a:hover {
+    color: black;
+}
 
 .a-nav-1 {
-    margin-left: 10%;
+    margin-left: 22%;
     color: black;
+    font-weight: 500;
 }
 
 .a-nav-2 {
-    margin-left: 8%;
+    margin-left: 4%;
     color: black;
+    font-weight: 500;
 }
 
 .a-nav-3 {
-    margin-left: 8%;
+    margin-left: 4%;
     color: black;
+    font-weight: 500;
 }
 
 .a-nav-4 {
-    margin-left: 8%;
+    margin-left: 4%;
     color: black;
+    font-weight: 500;
 }
 
 .search-input {
-    margin-top: 17px;
     float: right;
     margin-right: 20px;
     padding-left: 8px;
     font-style: italic;
     height: 35px;
-    width: 17%;
+    width: 14%;
 }
 
 @media (min-width: 0px) and (max-width: 400px) {
