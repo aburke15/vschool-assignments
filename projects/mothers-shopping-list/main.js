@@ -5,6 +5,7 @@ function addButton() {
     // get the value from the input field 
     var getID = document.getElementById("grocery-input");
     var groceries = getID.value;
+    // pass value to the appendValue function 
     appendValue(groceries);
 }
 
