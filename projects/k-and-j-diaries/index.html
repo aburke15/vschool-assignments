@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <title>K & J Diaries</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,10 +16,10 @@
         <nav class="the-nav">
             <div class="dropdown">
                 <img class="nav-img" href="#" src="k-and-j-photos/logo-kj.png" alt="K&JLogo">
-                <a class="a-nav-1" href="#">CATEGORIES</a>
-                <a class="a-nav-2" href="#">ABOUT</a>
-                <a class="a-nav-3" href="">SHOP</a>
-                <a class="a-nav-4" href="">CONTACT</a>
+                <a class="a-nav-1 a-nav" href="#">CATEGORIES</a>
+                <a class="a-nav-2 a-nav" href="#">ABOUT</a>
+                <a class="a-nav-3 a-nav" href="#">SHOP</a>
+                <a class="a-nav-4 a-nav" href="#">CONTACT</a>
                 <input class="input search-input" type="text" placeholder="Search">
             </div>
         </nav>
@@ -29,56 +30,92 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="bottom">
-                    <input class="the-input center-block input" type="email" placeholder="Subscribe by Email">
-                </div>
-            </div>
-        </div>
     </head>
 
     <main>
-        <div class="container-fluid">
-            <div class="row">
-                <div>
-                    <div>
-                        <h4 class="div-main col-md-7 col-md-offset-1">May 20th 2016</h4>
-                        <h2 class="div-main col-md-7 col-md-offset-1">THE SKIN CARE PRODUCTS I USE ALL YEAR LONG</h2>
-                        <p class="div-main col-md-7 col-md-offset-1">Beauty</p>
-                    </div>
-                    <div>
-                        <img class="div-main img-responsive col-md-6 col-md-offset-1" src="k-and-j-photos/skin8.jpg" alt="">
-                    </div>
-                    <div>
-                        <div class="">
-                            <h3 class="side-items div-main col-md-3">FOLLOW</h3>
-                        </div>
-                        <div>
-                            <h3 class="side-items div-main col-md-3">SUBSCRIBE</h3>
-                        </div>
-                        <div>
-                            <h3 class="side-items div-main col-md-3">WISHLIST</h3>
-                        </div>
-                        <div>
-                            <h3 class="side-items div-main col-md-3">FAVORITES</h3>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="div-main col-md-6 col-md-offset-1">My skin care routine has been the most requested topic for the last 2 years! It’s not that I didn’t want to spill my “secrets”… I just hadn’t found a product or skin care routine that I (at that time) was 100% satisfied with. I try to give you quality content and my honest opinion […]</p>
-                    </div>
-                    <div>
-                        <button class="btn div-main col-md-6 col-md-offset-1">READ MORE</button>
-                    </div>
-                    <div>
-                    <!-- glypicons and comments-->
-                    <p>0 Comments</p>
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="bottom">
+                        <input class="the-input center-block input" type="email" placeholder="Subscribe by Email">
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section>
+            <article>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="container col-lg-6 col-md-6 col-sm-8 col-xs-12">
+                            <header>
+                                <h4 class="text-center">May 20 2016</h4>
+                                <h2 class="text-center"><a href="#">THE SKIN CARE PRODUCTS I USE ALL YEAR LONG</a></h2>
+                                <p class="text-center"><i>Beauty</i></p>
+                            </header>
+
+                            <main>
+                                <div>
+                                    <img class="img-responsive" src="k-and-j-photos/skin8.jpg" alt="">
+                                </div>
+
+                                <div>
+                                    <p class="text-left">My skin care routine has been the most requested topic for the last 2 years! It’s not that I didn’t want to spill my “secrets”… I just hadn’t found a product or skin care routine that I (at that time) was 100% satisfied with. I try to give you quality content and my honest opinion […]</p>
+                                </div>
+                            </main>
+
+                            <footer>
+                                <div>
+                                    <button class="center-block btn">READ MORE</button>
+                                </div>
+
+                                <div class="p-spacing">
+                                    <!-- glypicons and comments-->
+                                    <p class="text-right"><a href="#">0</a> Comments</p>
+                                </div>
+
+                                <div>
+                                    <h3 class="text-center">RELATED</h3>
+                                    <img src="" alt="">
+                                    <img src="" alt="">
+                                    <img src="" alt="">
+                                    <img src="" alt="">
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section>
+
+            <aside class="col-sm-4 col-md-offset-1 col-md-3">
+
+                <div class="container">
+                    <div>
+                        <h3 class="">FOLLOW</h3>
+                    </div>
+                    <div>
+                        <h3 class="">SUBSCRIBE</h3>
+                    </div>
+                    <div>
+                        <h3 class="">WISHLIST</h3>
+                    </div>
+                    <div>
+                        <h3 class="">FAVORITES</h3>
+                    </div>
+                </div>
+
+            </aside>
+
+        </section>
+
     </main>
-    
+
 </body>
 
 </html>
