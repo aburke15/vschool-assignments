@@ -31,12 +31,7 @@ h4:after {
 h4:before {
     margin-left: -14%;
     text-align: right;
-     
 }
-
-
-
-
 
 h3 {
     font-family: sans-serif;
@@ -61,7 +56,6 @@ h3:after {
 h3:before {
     margin-left: -40%;
     text-align: right;
-     
 }
 
 h2 {
@@ -80,6 +74,9 @@ h2 a:hover {
     text-decoration: none;
 }
 
+hr {
+    display: inline;
+}
 
 p i {
     color: darkgrey;
@@ -120,10 +117,30 @@ div a:hover {
     border-color: #FEE8DF;
 }
 
+span i {
+    color: #FEE8DF;
+}
+
+span i:hover {
+    text-decoration: none;
+}
+
+.fa-icon {
+    font-size: 30px;
+}
+
+.fa-spacing {
+    margin-right: 30px;
+}
+
+.fa-margin {
+    margin-right: 38.5%;
+}
+
 .img:hover {
     opacity: 0.8;
     cursor: pointer;
-}
+} 
 
 .dropdown-content {
     margin-top: 25px;
