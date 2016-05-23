@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="learningAngular">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Beginnings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController" class="container">
+    <label for="">Type your name:</label>
+    <input id="name" type="text" ng-model="person.name">
+    <br>
+
+    <h1>{{ person.name }}</h1>
+
+
+    <!--
+    <h1>Today's nursing home birthdays:</h1>
+    <div ng-repeat="person in people">
+        <h1>{{ person.name }} is {{ person.age }} years old. Friend list: </h1>
+        <ul>
+            <li ng-repeat="friend in person.friends"> {{ friend }}</li>
+        </ul>
+        <hr>
+    </div>
+-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

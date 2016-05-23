@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="playerKills">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Setup</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body ng-controller="MainController" class="container">
+   <h1>Today's players killed:</h1>
+   <hr>
+    <div ng-repeat="kill in player.kills">
+        <h2>Player: {{ kill.handle }}</h2>
+        <h2>Rank: {{ kill.rank }}</h2>
+        <h2>Clan members:</h2>
+        <ul>
+            <li ng-repeat="clans in kill.clan">{{ clans }}</li>
+        </ul>
+        <hr>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
