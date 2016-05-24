@@ -1,0 +1,29 @@
+.container {
+    margin-top: 10px;
+    width: 90%;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: floralwhite;
+    box-shadow: 10px 5px 5px darkgrey;
+}
+
+.text-width {
+    width: 97.75%;
+    margin-top: 15px;
+}
+
+.button {
+    margin-top: 15px; 
+    margin-bottom: 15px;
+}
+
+.no-border {
+    border: none;
+}
+
+.badge {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="uglyThings">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ugly Things</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController">
+    <section>
+        <div class="container">
+            <div class="row header-bar">
+                <form class="form-group">
+                    <div class="top-bar"></div>
+                    <div>
+                        <h1 class="text-center">All The Ugly Things</h1>
+                    </div>
+                    <div>
+                        <input class="form-control center-block input" placeholder="Title" type="text" ng-model="ugly.title">
+                    </div>
+                    <div>
+                        <input class="form-control center-block input" type="url" placeholder="image URL" ng-model="ugly.url">
+                    </div>
+                    <div>
+                        <input class="form-control center-block input" type="text" placeholder="Description" ng-model="ugly.info">
+                    </div>
+                    <div class="center-block">
+                        <button ng-click="addUgly(ugly)" class="center-block btn btn-default button" type="submit">SUBMIT</button>
+                    </div>
+                </form>
+
+            </div>
+
+            <section ng-repeat="ugly in uglyList track by $index">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 margin">
+                    <h2 class="text-center">{{ ugly.title }}</h2>
+                    <img class="center-block" ng-src="{{ ugly.url }}" height="300px" width="300px" alt="">
+                    <br>
+                    <p class="text-center">{{ ugly.info }}</p>
+                    <br>
+                    <div class="row">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Delete</button>
+                            </span>
+                            
+                            <input type="text" class="form-control" placeholder="Add comment">
+                            
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Post</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

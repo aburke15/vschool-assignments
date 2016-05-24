@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nameBadge">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Angular Name Badge</title>
+</head>
+
+<body ng-controller="MainController">
+    <section>
+        <div class="container">
+            <div class="row">
+                <form id="myForm" name="myForm" ng-submit="myForm" class="form-group" novalidate>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <br>
+                        <label class="" for="">First Name:</label>
+                        <input id="person" class="form-control" type="text" ng-model="person.firstName" required>
+                        <label for="">Email:</label>
+                        <input id="person" class="form-control" type="email" ng-model="person.email" required>
+                        <label for="">Phone:</label>
+                        <input id="person" class="form-control" type="number" ng-model="person.phoneNumber" required>
+                    </div>
+
+                    <aside class="col-lg-6 col-md-6 col-sm-6">
+                        <br>
+                        <label>Last Name:</label>
+                        <input id="person" class="form-control" type="text" ng-model="person.lastName" required>
+                        <label>Place of Birth:</label>
+                        <input id="person" class="form-control" type="text" ng-model="person.birthPlace" required>
+                        <label for="">Favorite Food:</label>
+                        <input id="person" class="form-control" type="text" ng-model="person.favoriteFood" required>
+                        <br>
+                    </aside>
+
+                    <div class="text-width center-block">
+                        <label for="">Tell us about yourself:</label>
+                        <textarea class="form-control" name="" id="" rows="10" ng-model="person.aboutMe" required></textarea>
+                    </div>
+
+                    <div class="button">
+                        <button class="center-block btn btn-success" ng-click="addBadge(person)" id="submit" type="submit" value="Submit">SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section ng-repeat="person in badges track by $index">
+        <div class="container">
+            <div class="row">
+                <form id="myOtherForm" class="form-group">
+                    <div class="badge" ng-style="{'background-color': colors[$index]}">
+                        <h2>{{ person.firstName }} {{ person.lastName }}</h2>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <br>
+                        <label class="">Name:</label>
+                        <h4>{{person.firstName}} {{ person.lastName }}</h4>
+                        <label>Email:</label>
+                        <h4>{{ person.email }}</h4>
+                        <label>Phone:</label>
+                        <h4>{{ person.phoneNumber }}</h4>
+                    </div>
+
+                    <aside class="col-lg-6 col-md-6 col-sm-6">
+                        <br>
+                        <label>Place of Birth:</label>
+                        <h4>{{ person.birthPlace }}</h4>
+                        <label>Favorite Food:</label>
+                        <h4>{{ person.favoriteFood }}</h4>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </aside>
+
+                    <div class="text-width center-block" novalidate>
+                        <label>About you:</label>
+                        <textarea class="form-control" rows="10" readonly>{{ person.aboutMe }}</textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

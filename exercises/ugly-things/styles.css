@@ -1,0 +1,42 @@
+body {
+    background-color: floralwhite;
+}
+
+.header-bar {
+    width: 100%;
+    height: auto;
+    background-color: cadetblue;
+    border-radius: 10px;
+}
+
+.input {
+    margin-top: 30px;
+    width: 60%;
+}
+
+.top-bar {
+    height: 3px;
+}
+
+.button {
+    margin-top: 15px;
+}
+
+.description {
+    height: 50px;
+}
+
+.margin {
+    margin: 0px, 0px, 30px, 30px;
+}
+
+.input-group {
+    width: 80%; 
+    margin-left: 38px; 
+}
+
+@media (min-width: 0px) and (max-width: 900px) {
+    .header-bar {
+        margin-left: 1px;
+    }
+}
