@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngModel">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular Ng Model</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController">
+    <main class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group div-height well center-block">
+                <input class="form-control" id="module" ng-model="box.module" type="text">
+                <input class="form-control" id="module" ng-model="box.module" type="text">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group div-height well center-block">
+                <input class="form-control" id="module" ng-model="box1.module" type="text">
+                <input class="form-control" id="module" ng-model="box1.module" type="text">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 form-group div-height well center-block">
+                <input class="form-control" id="module" ng-model="box2.module" type="text">
+                <input class="form-control" id="module" ng-model="box2.module" type="text">
+            </div>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
