@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="http">
+
+<head>
+    <meta charset="UTF-8">
+    <title>$http Hit List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="HttpController">
+    <header class="container-fluid top-bar">
+        <div class="row">
+            <div>
+                <img src="Godfather15_flip.jpg" height="80px" alt="">
+                <h3>Don Corleone's List</h3>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="row">
+                <div>
+                    <div ng-repeat="items in hit track by $index">
+                        <img class="center-block img" ng-src="{{ items.image }}" height="300px" width="300px" alt="">
+                        <div class=" head-bar center-block">
+                            <h2 class="text-center">{{ items.name }}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

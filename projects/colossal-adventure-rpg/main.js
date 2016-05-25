@@ -119,8 +119,8 @@ function levelUp() {
         level++;
         console.log();
         console.log("You have gained a level! You are now level " + level + "!");
-        console.log(); 
-        console.log("You gained 20 points of health."); 
+        console.log();
+        console.log("You gained 20 points of health.");
         playerHealth = playerHealth + 20;
         count = 0;
     }

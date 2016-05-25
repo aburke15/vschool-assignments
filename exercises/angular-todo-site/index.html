@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todo">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular To-Dolist</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="TodoController">
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="">
+                        <form class="form-group" action="">
+                            <input placeholder="To-Do" class="form-control" type="text">
+                            <input type="url">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div ng-repeat="items in todoList">
+                
+            </div>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
