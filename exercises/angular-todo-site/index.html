@@ -14,26 +14,76 @@
     </header>
     <main>
         <section>
-            <div class="container">
+            <div class="container border">
                 <div class="row">
-                    <div class="">
-                        <form class="form-group" action="">
-                            <input placeholder="To-Do" class="form-control" type="text">
-                            <input type="url">
-                        </form>
-                    </div>
+                    <form class="form-group" action="">
+                        <h2 class="text-center">TO-DO-LIST</h2>
+                        <div class="col-lg-3 col-md-3">
+                            <div>
+                                <br>
+                                <input class="form-control center-block input-block" placeholder="To-Do" type="text" ng-model="todo.title">
+                            </div>
+                            <div>
+                                <br>
+                                <input class="form-control center-block input-block" placeholder="Price" type="number" ng-model="todo.price">
+                            </div>
+                        </div>
+                        <br>
+                        <aside class="col-lg-3 col-md-3">
+                            <div>
+                                <input class="form-control center-block input-block" placeholder="Image URL" type="url" ng-model="todo.image">
+                            </div>
+                            <div>
+                                <br>
+                                <input class="form-control center-block input-block input-bottom" placeholder="Descripton" type="text" ng-model="todo.info">
+                            </div>
+                        </aside>
+                    </form>
+                    <button class="center-block btn btn-success todo-btn glyphicon glyphicon-floppy-disk" ng-click="add(todo)"></button>
                 </div>
             </div>
         </section>
 
         <section>
-            <div ng-repeat="items in todoList">
-                
+            <div class="container border" ng-repeat="todo in todoList track by $index">
+                <div class="row">
+                    <div class="center-block">
+
+                        <form class="form-group" action="">
+                            <h2 ng-hide="editing" ng-class="{ completed : todo.completed }" class="text-center">To-Do: {{ todo.title }}</h2>
+                            <div class="col-lg-3 col-md-3">
+                                <div>
+                                    <img class="img-responsive" ng-src="{{ todo.image }}">
+                                </div>
+                                <div>
+                                    <br>
+                                    <input ng-show="editing" class="form-control center-block input-block" placeholder="To-Do" type="text" ng-model="todo.title">
+                                </div>
+                                <div>
+                                    <br>
+                                    <h5 ng-hide="editing" class="text-left">Price: {{ todo.price | currency }}</h5>
+                                    <input ng-show="editing" class="form-control center-block input-block input-bottom" placeholder="Price" type="number" ng-model="todo.price">
+                                </div>
+                            </div>
+                            <br>
+                            <aside class="col-lg-3 col-md-3">
+                                <div>
+                                    <p ng-hide="editing" class="text-left">Description: {{ todo.info }}</p>
+                                    <input ng-show="editing" class="form-control center-block input-block" placeholder="Descripton" type="text" ng-model="todo.info">
+                                </div>
+                            </aside>
+                        </form>
+
+                        <button ng-click="editing = !editing" class=" btn btn-primary btn-sm glyphicon glyphicon-pencil float-btn"></button>
+                        <button ng-click="delete(todo, $index)" class=" btn btn-danger btn-sm glyphicon glyphicon-remove float-btn"></button>
+                        <button ng-click="todo.completed = !todo.completed" class=" btn btn-success btn-sm glyphicon glyphicon-ok float-btn"></button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="app.js"></script>
 </body>
 

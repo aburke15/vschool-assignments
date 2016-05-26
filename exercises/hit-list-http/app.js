@@ -5,10 +5,14 @@ app.controller("HttpController", ["$scope", "$http", function ($scope, $http) {
     $http.get("http://mean.codingcamp.us:6543/hitlist.json")
         .then(function (response) {
             for (var i = 0; i < response.data.length; i++) {
-                $scope.hit[i] = response.data[i];
+                if (i % 2 === 0) {
+                    $scope.hit[i] = response.data[i]; 
+                } else {
+                    $scope.hit[i] = response.data[i]; 
+                }
             }
+        console.log($scope.hit); 
         }, function (error) {
             console.log(error);
         });
-    
 }]);
