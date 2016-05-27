@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="theService">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular Service Beginnings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MainController">
+
+    <main>
+        <section>
+            <div class="container border">
+                <div class="row">
+                    <h3 class="text-center">Add your favorite pokemon</h3>
+                    <form class="form-group" action="">
+                        <div>
+                            <input placeholder="Pokemon's name" class="form-control" type="text" ng-model="pokemon">
+                        </div>
+                    </form>
+                    <button ng-click="add(pokemon)" type="submit" class="btn btn-success glyphicon glyphicon-plus btn-bottom"></button>
+                    <button ng-click="delete(pokemon, index)" type="submit" class="btn btn-danger glyphicon glyphicon-remove btn-bottom"></button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+        <div class="container" ng-repeat="pokemon in pokeList track by $index">
+            <div class="row">
+                <ul>
+                   <br>
+                    <li>{{ pokemon }}</li>
+                </ul>
+            </div>
+        </div>
+        </section>
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="services/pokeService.js"></script>
+</body>
+
+</html>

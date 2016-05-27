@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cartoonCreator">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular More Services</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="CartoonController">
+
+    <header>
+        <section>
+            <div class="top-bar container">
+                <div class="row">
+                    <div>
+                        <h1 class="text-center">Add Your Favorite Cartoon</h1>
+                    </div>
+                    <form class="form-group" action="">
+                        <div class="col-lg-4 col-md-4">
+                            <input class="form-control" placeholder="Name" type="text" ng-model="cartoon.name">
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <input class="form-control" placeholder="Image URL" type="text" ng-model="cartoon.image">
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <input class="form-control" placeholder="Description" type="text" ng-model="cartoon.info">
+                        </div>
+                    </form>
+                    <div class="btn-top">
+                        <button ng-click="addCartoon(cartoon)" type="submit" class="center-block btn btn-success btn-lg glyphicon glyphicon-plus"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section ng-repeat="cartoon in cartoonList track by $index">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <h2 class="text-center">{{ cartoon.name }}</h2>
+                    </div>
+                    <div>
+                        <img class="center-block img-responsive" ng-src="{{ cartoon.image }}">
+                    </div>
+                    <div>
+                        <p class="text-center">{{ cartoon.info }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="services/cartoonService.js"></script>
+</body>
+
+</html>

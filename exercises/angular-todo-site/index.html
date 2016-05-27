@@ -31,11 +31,11 @@
                         <br>
                         <aside class="col-lg-3 col-md-3">
                             <div>
-                                <input class="form-control center-block input-block" placeholder="Image URL" type="url" ng-model="todo.image">
+                                <input class="form-control center-block input-block" placeholder="Image URL" type="url" ng-model="todo.imgUrl">
                             </div>
                             <div>
                                 <br>
-                                <input class="form-control center-block input-block input-bottom" placeholder="Descripton" type="text" ng-model="todo.info">
+                                <input class="form-control center-block input-block input-bottom" placeholder="Descripton" type="text" ng-model="todo.description">
                             </div>
                         </aside>
                     </form>
@@ -48,35 +48,35 @@
             <div class="container border" ng-repeat="todo in todoList track by $index">
                 <div class="row">
                     <div class="center-block">
-
                         <form class="form-group" action="">
-                            <h2 ng-hide="editing" ng-class="{ completed : todo.completed }" class="text-center">To-Do: {{ todo.title }}</h2>
-                            <div class="col-lg-3 col-md-3">
-                                <div>
-                                    <img class="img-responsive" ng-src="{{ todo.image }}">
-                                </div>
-                                <div>
-                                    <br>
-                                    <input ng-show="editing" class="form-control center-block input-block" placeholder="To-Do" type="text" ng-model="todo.title">
-                                </div>
-                                <div>
-                                    <br>
-                                    <h5 ng-hide="editing" class="text-left">Price: {{ todo.price | currency }}</h5>
-                                    <input ng-show="editing" class="form-control center-block input-block input-bottom" placeholder="Price" type="number" ng-model="todo.price">
-                                </div>
+                            <div>
+                                <img class="img-responsive center-block" ng-src="{{ todo.imgUrl }}" height="100px" width="100px">
                             </div>
-                            <br>
-                            <aside class="col-lg-3 col-md-3">
-                                <div>
-                                    <p ng-hide="editing" class="text-left">Description: {{ todo.info }}</p>
-                                    <input ng-show="editing" class="form-control center-block input-block" placeholder="Descripton" type="text" ng-model="todo.info">
-                                </div>
-                            </aside>
-                        </form>
+                            <div>
+                                <h2 ng-show="todo.editing" ng-class="{ completed : todo.completed }" class="text-center input-bottom">To-Do:</h2>
+                                <h2 ng-hide="todo.editing" ng-class="{ completed : todo.completed }" class="text-center input-bottom">To-Do: {{ todo.title }}</h2>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
 
-                        <button ng-click="editing = !editing" class=" btn btn-primary btn-sm glyphicon glyphicon-pencil float-btn"></button>
+                                <div>
+                                    <input ng-show="todo.editing" class="form-control center-block input-block input-bottom" placeholder="To-Do" type="text" ng-model="todo.title">
+                                </div>
+                                <div>
+                                    <p ng-hide="todo.editing" class="text-left input-bottom">Price: {{ todo.price | currency }}</p>
+                                    <input ng-show="todo.editing" class="form-control center-block input-block input-bottom" placeholder="Price" type="number" ng-model="todo.price">
+                                </div>
+
+                                <div>
+                                    <p ng-hide="todo.editing" class="text-left input-bottom">Description: {{ todo.description }}</p>
+                                    <input ng-show="todo.editing" class="form-control center-block input-block input-bottom" placeholder="Descripton" type="text" ng-model="todo.description">
+                                </div>
+
+                            </div>
+                        </form>
+                        <button ng-show="todo.editing" ng-click="update(todo, $index)" class=" btn btn-success btn-sm glyphicon glyphicon-floppy-disk float-btn"></button>
+                        <button ng-hide="todo.editing" ng-click="todo.editing = !todo.editing" class=" btn btn-primary btn-sm glyphicon glyphicon-pencil float-btn"></button>
                         <button ng-click="delete(todo, $index)" class=" btn btn-danger btn-sm glyphicon glyphicon-remove float-btn"></button>
-                        <button ng-click="todo.completed = !todo.completed" class=" btn btn-success btn-sm glyphicon glyphicon-ok float-btn"></button>
+                        <button ng-show="todo.editing" ng-click="todo.completed = !todo.completed" class=" btn btn-success btn-sm glyphicon glyphicon-ok float-btn"></button>
                     </div>
                 </div>
             </div>
@@ -85,6 +85,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="app.js"></script>
+    <script src="services/httpService.js"></script>
 </body>
 
 </html>

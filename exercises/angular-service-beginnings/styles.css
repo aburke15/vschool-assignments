@@ -1,0 +1,10 @@
+.border {
+    border: 2px solid black; 
+    height: auto; 
+    border-radius: 10px; 
+    background-color: lightgrey; 
+}
+
+.btn-bottom {
+    margin-bottom: 20px;  
+}

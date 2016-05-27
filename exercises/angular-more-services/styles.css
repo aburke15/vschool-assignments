@@ -1,0 +1,26 @@
+.top-bar {
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: auto;
+    background-color: cornflowerblue;
+}
+
+.btn-top {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+body {
+    background-color: aqua;
+    border-radius: 10px; 
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+h1 {
+    color: orange;
+}
