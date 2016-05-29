@@ -1,10 +1,25 @@
-// create event that tracks how many times the image is clicked
+var clicked = 0;
+var value = localStorage.getItem("clicked");
 
-// set count variable to zero
-var count = 0;
+if (value) {
+    clicked = parseInt(value);
+}
 
-// get the value of the image being clicked
 $("img").click(function () {
-    count = $("#clicked").val();
-    console.log(count);
+    clicked += 1;
+    var picClicked = $("#clicked");
+    picClicked = clicked;
+    var timesClicked = document.getElementById("times-clicked");
+    timesClicked.value = clicked;
+    localStorage.setItem("clicked", clicked);
+
 });
+
+$("button").click(function () {
+    clicked = 0;
+    var timesClicked = document.getElementById("times-clicked");
+    timesClicked.value = clicked;
+    localStorage.setItem("clicked", clicked);
+});
+
+document.getElementById("times-clicked").value = localStorage.getItem("clicked");

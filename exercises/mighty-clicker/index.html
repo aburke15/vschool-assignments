@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mightyClicker">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Mighty Clicker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MightyController">
+    <main>
+        <section class="container">
+            <div class="row">
+                <form class="form-group">
+                    <div class="">
+                        <input class="form-control" type="number" readonly>
+                    </div>
+                    <div class="">
+                        <button class="center-block btn btn-danger">RED</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="row">
+                <form class="form-group" action="">
+                    <div class="">
+                        <input class="form-control" type="number" readonly>
+                    </div>
+                    <div>
+                        <button class="center-block btn btn-primary">BLUE</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="services/blueService.js"></script>
+    <script src="services/redService.js"></script>
+</body>
+
+</html>
