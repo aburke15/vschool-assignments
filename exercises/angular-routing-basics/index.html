@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="routingApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angular Routing Basics</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-bar">
+            <nav class="container">
+                <div class="row">
+                    <ul>
+                        <a href="#/">
+                            <li>HOME</li>
+                        </a>
+                        <a href="#/about">
+                            <li>ABOUT</li>
+                        </a>
+                        <a href="#/whyilove">
+                            <li>WHY I LOVE</li>
+                        </a>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div ng-view></div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="home/home.js"></script>
+    <script src="about/about.js"></script>
+    <script src="whyilove/iLove.js"></script>
+</body>
+
+</html>

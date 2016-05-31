@@ -1,0 +1,13 @@
+.border {
+    width: 80%;
+    height: auto;
+    border: 2px solid black; 
+    border-radius: 10px;
+    background-color: floralwhite; 
+}
+
+.nav-bar {
+    height: 80px;
+    width: 100%; 
+    background-color: lightgrey; 
+}

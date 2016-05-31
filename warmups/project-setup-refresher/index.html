@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="angularModule">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intitial-scale=1">
+    <title>Angular Setup</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <section ng-controller="MainController">
+            <div class="container">
+                <div class="row">
+                    <form class="form-group">
+                        <div>
+                            <input class="form-control" type="number" ng-model="sumOne">
+                        </div>
+                        <div>
+                            <h2 class="text-center">+</h2>
+                        </div>
+                        <div>
+                            <input class="form-control" type="number" ng-model="sumTwo">
+                        </div>
+                    </form>
+                    <div>
+                        <button ng-click="sumUp(sumOne, sumTwo)" class="center-block btn btn-primary">Sum Up</button>
+                    </div>
+                    <div>
+                        <h1 class="text-center">{{ total }}</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section ng-controller="SecondController">
+            <div class="container">
+                <div class="row">
+                    <form class="form-group">
+                        <div>
+                            <input class="form-control" type="number" ng-model="productOne">
+                        </div>
+                        <div>
+                            <h2 class="text-center">x</h2>
+                        </div>
+                        <div>
+                            <input class="form-control" type="number" ng-model="productTwo">
+                        </div>
+                    </form>
+                    <div>
+                        <button ng-click="multiUp(productOne, productTwo)" class="center-block btn btn-danger">Multiply</button>
+                    </div>
+                    <div>
+                        <h1 class="text-center">{{ total }}</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="services/setupService.js"></script>
+</body>
+
+</html>
