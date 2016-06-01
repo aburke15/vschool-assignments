@@ -67,6 +67,7 @@ One of the fields it also returns is a sprites array that looks like this:
             "resource_uri": "/api/v1/sprite/1/"
         }
     ]
+    
 Another GET request to the resource_uri of either one of these produces a response 
 
 that contains an image field to be used for getting the actual sprite .jpg file.
