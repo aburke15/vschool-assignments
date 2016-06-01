@@ -9,13 +9,12 @@ app.service("PokeService", ["$http", function ($http) {
         var pokemon = {};
         return $http.get(baseUrl + pokeNumber).then(function (response) {
             pokemon.name = response.data.name;
-            pokemon.attack = response.data.attack;
-            pokemon.abilities = response.data.abilities[0].name;
-            
-            return $http.get(imgUrl + (pokeNumber + 1)).then(function (response) {
-                pokemon.image = "http://pokeapi.co/" + response.data.image;
-                return pokemon;
-            });
+            pokemon.attack = response.data.attack; 
+            pokemon.abilities = response.data.abilities[0].name; 
+            return $http.get(imgUrl + (pokeNumber + 1));
+        }).then(function (response) {
+            pokemon.image = "http://pokeapi.co/" + response.data.image;
+            return pokemon;
         });
     };
 }]);

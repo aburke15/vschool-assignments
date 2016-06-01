@@ -10,10 +10,6 @@ body {
     width: 380px; 
 }
 
-.btn {
-    width: 100%; 
-}
-
 h1 {
     color: white; 
 }
@@ -23,5 +19,5 @@ img {
 }
 
 .top-margin {
-    margin-top: 30px; 
+    margin-top: 80px; 
 }

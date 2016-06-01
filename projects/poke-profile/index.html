@@ -21,11 +21,11 @@
                     </div>
                     <form class="form-group">
                         <div>
-                            <input min="1" class="form-control" type="number" ng-model="pokeNumber" required>
+                            <input class="form-control" type="number" ng-model="pokeNumber">
                         </div>
                     </form>
                     <div>
-                        <button ng-click="getPokemon(pokeNumber)" class="center-block btn btn-primary">Search Pokemon</button>
+                        <button ng-click="getPokemon(pokeNumber)" class="center-block btn btn-primary btn-block">Search Pokemon</button>
                     </div>
                 </div>
             </div>
@@ -38,13 +38,13 @@
                         <h1 class="text-center"> {{ pokemon.name }} </h1>
                     </div>
                     <div>
-                        <h4 class="text-center">Attack: {{ pokemon.attack }}</h4>
+                        <h4 class="text-center"> Attack: {{ pokemon.attack }}</h4>
                     </div>
                     <div>
                         <h4 class="text-center">Ability: {{ pokemon.abilities }} </h4>
                     </div>
                     <div>
-                        <img class="img-responsive center-block" height="150px" width="150px" ng-src="{{ pokemon.image }}">
+                        <img class="img-responsive center-block" height="175px" width="175px" ng-src="{{ pokemon.image }}">
                     </div>
                 </div>
             </div>
