@@ -9,16 +9,31 @@
     <link rel="icon" href="img/ptcloudy.png">
 </head>
 
-<body class="container">
-    <header>
-
-    </header>
-
-    <main>
+<body class="">
+   <header>
+       <div>
+            <nav class="nav-bar">
+                <ul>
+                    <a href="#/home">
+                        <li>Home</li>
+                    </a>
+                    <a href="#/weather">
+                        <li>Current Weather</li>
+                    </a>
+                    <a href="#/forecast">
+                        <li>Weather Forecast</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+   </header>
+   
+    <section class="container border-box">
+        
         <div>
             <div ng-view></div>
         </div>
-    </main>
+    </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>

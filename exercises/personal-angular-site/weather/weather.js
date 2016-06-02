@@ -1,5 +1,6 @@
-var app = angular.module("weatherApp"); 
+var app = angular.module("weatherApp");
 
-app.controller("WeatherController", ["$scope", function($scope) {
+app.controller("WeatherController", ["$scope", "LocationWeatherService", function ($scope, LocationWeatherService) {
+    $scope.forecast = LocationWeatherService; 
     
-}]); 
+}]);

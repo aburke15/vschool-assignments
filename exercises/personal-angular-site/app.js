@@ -10,6 +10,10 @@ app.config(function($routeProvider) {
         templateUrl: "weather/weather.html",
         controller: "WeatherController"
     })
+        .when("/forecast", {
+        templateUrl: "forecast/forecast.html",
+        controler: "ForecastController"
+    })
         .otherwise({
         templateUrl: "home/home.html",
         controller: "HomeController"

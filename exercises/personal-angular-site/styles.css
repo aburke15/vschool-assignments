@@ -1,11 +1,31 @@
-.home-div {
-    width: 400px;
-}
-
 body {
     background: url("img/weather-wallpaper-24.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.home-div {
+    width: 400px;
+}
+
+.border-box {
+    width: 95%; 
+    height: 1500px;
+    background-color: ghostwhite; 
+    opacity: .8; 
+    border-radius: 6px; 
+}
+
+.nav-bar {
+    height: 80px; 
+    background-color: lightskyblue; 
+    width: 100%; 
+    position: fixed; 
+    z-index: 1; 
+}
+
+.top-margin {
+    margin-top: 150px; 
 }

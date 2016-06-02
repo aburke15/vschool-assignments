@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="techApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Tech Wishlist</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+
+<body>
+    <div class="container box-border">
+        <div>
+            <div>
+                <h1 class="text-center">My Tech Wishlist</h1>
+            </div>
+            <div>
+                <h4 class="text-center"><a href="#/phones">Phones & Computers</a></h4>
+            </div>
+            <div>
+                <h4 class="text-center"><a href="#/other">Other Tech</a></h4>
+            </div>
+        </div>
+
+        <div ng-view></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="directives/directives.js"></script>
+    <script src="phones/phones.js"></script>
+    <script src="other/other.js"></script>
+</body>
+
+</html>
