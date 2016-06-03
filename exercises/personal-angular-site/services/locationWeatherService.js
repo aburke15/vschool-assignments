@@ -29,7 +29,6 @@ app.service("LocationWeatherService", ["$http", function ($http) {
                 }
             });
         }).then(function (response) {
-            //console.log(response.data.query.results.channel);
             self.title = response.data.query.results.channel.description;
             self.conditionCode = response.data.query.results.channel.item.forecast[0].code;
             self.conditions = response.data.query.results.channel.item.forecast[0].text;
@@ -39,32 +38,28 @@ app.service("LocationWeatherService", ["$http", function ($http) {
             var celcius = parseInt(response.data.query.results.channel.item.condition.temp);
             var fahrenheit = Math.floor((celcius * 9) / 5 + 32);
             self.temperature = fahrenheit + " F";
+            this.dataTrue = true;
         });
     }
-
+    
     this.getForecast = function () {
         return $http.get(forecastUrl + self.lat + "&lng=" + self.lng, {
             headers: {
                 "X-Mashape-Key": "QD2LX19LGAmshaZLifYLtavC8xSVp1udH9qjsnlk73Ix5jTx8U"
             }
         }).then(function (response) {
-            var theForecast = [];
-            var tenDayHi = [];
-            var tenDayLow = [];
-            var tenDayDate = [];
-            var tenDayDay = [];
-            var theData = response.data.query.results.channel.item.forecast;
-            console.log(theData); 
-            for (var i = 0; i < theData.length; i++) {
-                theForecast.push(theData[i]);
-                tenDayHi += theData[i].hi;
-                tenDayLow.push(theData[i].low);
-                tenDayDate.push(theData[i].date);
-                tenDayDay += theData[i].day;
-            }
-            self.tenDayTitle = "10 Day Forecast"; 
-            self.forecastList = tenDayDay;    
-            console.log(self.forecastList); 
+            self.forecastList = response.data.query.results.channel.item.forecast; 
+            console.log(self.forecastTempH); 
+            self.tenDayTitle = "10 Day Forecast";
+            self.condition = "Condition:"
+            self.high = "High:";
+            self.days = "Day:";
+            self.low = "Low:"; 
+            self.date = "Date:"; 
         });
+        
+        for (var i = 0; i < self.forecastList.length; i++) {
+            
+        }
     }
 }]);

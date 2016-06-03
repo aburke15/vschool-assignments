@@ -112,7 +112,8 @@ h1 {
 }
 
 .cast-margin {
-    margin-top: 40px; 
+    margin-top: 40px;
+    border-right: .5px solid black; 
 }
 
 @media (min-width: 400px) and (max-width: 500px) {

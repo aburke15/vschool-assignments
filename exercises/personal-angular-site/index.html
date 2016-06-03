@@ -10,17 +10,17 @@
 </head>
 
 <body>
-    <header class="container-fluid">
+    <header class="container-fluid" ng-controller="NavbarController">
         <div class="row">
             <nav class="nav-bar">
                 <ul>
-                    <a class="" href="#/home">
+                    <a ng-class="{ active: isActive('/home') }" href="#/home">
                         <li>Home</li>
                     </a>
-                    <a class="" href="#/weather">
+                    <a ng-hide="isActive('/home')" href="#/weather">
                         <li>Current Weather</li>
                     </a>
-                    <a class="" href="#/forecast">
+                    <a ng-hide="isActive('/home')" ng-show="isThereData" href="#/forecast">
                         <li>10 Day Forecast</li>
                     </a>
                 </ul>
@@ -40,6 +40,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
     <script src="app.js"></script>
+    <script src="navbarController.js"></script>
     <script src="home/home.js"></script>
     <script src="weather/weather.js"></script>
     <script src="forecast/forecast.js"></script>
