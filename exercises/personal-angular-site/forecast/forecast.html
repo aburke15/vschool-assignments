@@ -1,1 +1,10 @@
-<h1 class="text-center">This is the forecast seciton</h1>
+<div class="center-block top-margin">
+    <div class="row">
+        <div>
+            <h3 class="text-center">{{ weather.tenDayTitle }}</h3>
+        </div>
+        <div>
+            <h4 class="text-center cast-margin" ng-repeat="days in weather.forecastList track by $index">{{ days }}</h4>
+        </div>
+    </div>
+</div>

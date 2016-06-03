@@ -6,26 +6,131 @@ body {
     background-size: cover;
 }
 
+li {
+    display: inline;
+    margin-left: 28px;
+    color: black;
+    font-size: 20px;
+}
+
+img {
+    -webkit-animation: fadein 6s;
+    -moz-animation: fadein 6s;
+    -ms-animation: fadein 6s;
+    -o-animation: fadein 6s;
+    animation: fadein 6s;
+}
+
+h1 {
+    font-family: monospace;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .home-div {
-    width: 400px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .border-box {
-    width: 95%; 
+    width: 100%;
     height: 1500px;
-    background-color: ghostwhite; 
-    opacity: .8; 
-    border-radius: 6px; 
+    background-color: ghostwhite;
+    opacity: .85;
 }
 
 .nav-bar {
-    height: 80px; 
-    background-color: lightskyblue; 
-    width: 100%; 
-    position: fixed; 
-    z-index: 1; 
+    padding-top: 23px;
+    box-sizing: border-box;
+    border: 1px solid lightgrey;
+    height: 75px;
+    background-color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
 }
 
 .top-margin {
-    margin-top: 150px; 
+    margin-top: 25px;
+}
+
+.btn-margin {
+    margin-top: 30px;
+}
+
+.hdr-margin {
+    box-sizing: border-box;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    opacity: .7;
+}
+
+.cast-margin {
+    margin-top: 40px; 
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    li {
+        font-size: 14px;
+        margin-left: 11px;
+    }
+    .nav-bar {
+        padding-top: 27px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 399px) {
+    li {
+        font-size: 12px;
+        margin-left: 8px;
+    }
+    .nav-bar {
+        padding-top: 29px;
+    }
 }
