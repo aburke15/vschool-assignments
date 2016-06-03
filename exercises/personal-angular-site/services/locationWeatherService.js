@@ -34,32 +34,27 @@ app.service("LocationWeatherService", ["$http", function ($http) {
             self.conditions = response.data.query.results.channel.item.forecast[0].text;
             self.humidity = "Humidity: " + response.data.query.results.channel.atmosphere.humidity;
             self.sunrise = "Sunrise: " + response.data.query.results.channel.astronomy.sunrise;
-            self.sunset = "Sunset: " + response.data.query.results.channel.astronomy.sunset; 
+            self.sunset = "Sunset: " + response.data.query.results.channel.astronomy.sunset;
             var celcius = parseInt(response.data.query.results.channel.item.condition.temp);
             var fahrenheit = Math.floor((celcius * 9) / 5 + 32);
             self.temperature = fahrenheit + " F";
             this.dataTrue = true;
         });
     }
-    
+
     this.getForecast = function () {
         return $http.get(forecastUrl + self.lat + "&lng=" + self.lng, {
             headers: {
                 "X-Mashape-Key": "QD2LX19LGAmshaZLifYLtavC8xSVp1udH9qjsnlk73Ix5jTx8U"
             }
         }).then(function (response) {
-            self.forecastList = response.data.query.results.channel.item.forecast; 
-            console.log(self.forecastTempH); 
+            self.forecastList = response.data.query.results.channel.item.forecast;
             self.tenDayTitle = "10 Day Forecast";
             self.condition = "Condition:"
             self.high = "High:";
             self.days = "Day:";
-            self.low = "Low:"; 
-            self.date = "Date:"; 
+            self.low = "Low:";
+            self.date = "Date:";
         });
-        
-        for (var i = 0; i < self.forecastList.length; i++) {
-            
-        }
     }
 }]);
