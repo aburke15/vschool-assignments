@@ -1,5 +1,11 @@
 var app = angular.module("weatherApp");
 
+app.filter("tempConverter", function() {
+    return function (temp) {
+        return Math.floor(temp * (9/5) + 32) + " F°"
+    }
+});
+
 app.service("LocationWeatherService", ["$http", function ($http) {
     var locationUrl = "https://michele-zonca-google-geocoding.p.mashape.com/geocode/json?address=";
     var weatherUrl = "https://simple-weather.p.mashape.com/weather?lat=";
@@ -37,8 +43,7 @@ app.service("LocationWeatherService", ["$http", function ($http) {
             self.sunset = "Sunset: " + response.data.query.results.channel.astronomy.sunset;
             var celcius = parseInt(response.data.query.results.channel.item.condition.temp);
             var fahrenheit = Math.floor((celcius * 9) / 5 + 32);
-            self.temperature = fahrenheit + " F";
-            this.dataTrue = true;
+            self.temperature = fahrenheit + " F°";
         });
     }
 

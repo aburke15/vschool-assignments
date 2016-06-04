@@ -9,3 +9,9 @@ app.controller("WeatherController", ["$scope", "LocationWeatherService", "$locat
         });
     }
 }]);
+
+app.filter("temperatureConvert", function() {
+    return function (temp) {
+        return Math.floor(temp * (9/5) + 32) + " F°"
+    }
+});

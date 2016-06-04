@@ -1,0 +1,11 @@
+body {
+    background: url("img/star_wars_yoda_4500x6000_wallp_1280x800_%20(1).jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    color: white; 
+}

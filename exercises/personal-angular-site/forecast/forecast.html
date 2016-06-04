@@ -14,8 +14,8 @@
             <tr ng-repeat="day in weather.forecastList">
                 <td>{{ day.day }}</td>
                 <td>{{ day.date }}</td>
-                <td>{{ day.high }}</td>
-                <td>{{ day.low }}</td>
+                <td>{{ day.high | temperature }}</td>
+                <td>{{ day.low | temperature }}</td>
                 <td>{{ day.text }}</td>
             </tr>
         </table>
