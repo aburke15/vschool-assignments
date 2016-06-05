@@ -6,9 +6,20 @@ body {
     background-size: cover;
 }
 
+.btn-color {
+    background-color: rebeccapurple;
+    color: white; 
+}
+
+.btn-color:hover {
+    color: deeppink; 
+}
+
 h1 {
     box-sizing: border-box;
-    color: white;
+    color: rebeccapurple; 
+    font-family: Hole-Hearted;
+    font-size: 50px;
 /*
     padding-top: 10px;
     padding-bottom: 10px;
@@ -28,7 +39,9 @@ input {
 
 h5 {
     box-sizing: border-box;
-    color: white;  
+    color: #2d6991; 
+    font-family: Hole-Hearted; 
+    font-size: 25px; 
 /*
     border: 2px solid black; 
     background-color: gray; 
@@ -43,9 +56,12 @@ h5 {
 
 .input-border {
     box-sizing: border-box;
-    width: auto;
-    padding-bottom: 30px;
-    border: 2px solid black;
-    border-radius: 8px;
-    background-color: white;
+    width: 350px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+@font-face {
+    font-family: Hole-Hearted;
+    src: url("fonts/Hole-Hearted.ttf");
 }
