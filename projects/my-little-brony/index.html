@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ponyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Little Brony List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="http://vignette4.wikia.nocookie.net/mlp-gameloft/images/0/04/Wiki_Favicon.png/revision/latest?cb=20140810115824">
+</head>
+
+<body ng-controller="PonyController">
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h1 class="text-center">My Fav Little Ponies</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <form class="form-group" action="">
+                        <div>
+                           <h5>Name:</h5>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div>
+                           <h5>Image URL:</h5>
+                            <input class="form-control" type="text">
+                        </div>
+                        <div>
+                           <h5>Username:</h5>
+                            <input class="form-control" type="text">
+                        </div>
+                    </form>
+                    <div>
+                        <button class="btn btn-success">Add Pony</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="pony-add/ponyAdd.js"></script>
+    <script src="pony-list/ponyList.js"></script>
+    <script src="services/PonyService.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+body {
+    background: url("http://wallpapercave.com/wp/CRmZy32.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    box-sizing: border-box;
+    color: white;
+/*
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid black;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    background-color: gray;
+    opacity: .8;
+*/
+}
+
+input {
+    opacity: .7; 
+}
+
+h5 {
+    box-sizing: border-box;
+    color: white;  
+/*
+    border: 2px solid black; 
+    background-color: gray; 
+    border-radius: 8px; 
+    opacity: .8; 
+    width: 85px; 
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+*/
+}
+
+.input-border {
+    box-sizing: border-box;
+    width: auto;
+    padding-bottom: 30px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: white;
+}
