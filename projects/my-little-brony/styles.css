@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Hole-Hearted;
+    src: url("fonts/Hole-Hearted.ttf");
+}
+
 body {
     background: url("http://wallpapercave.com/wp/CRmZy32.png") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -6,62 +11,76 @@ body {
     background-size: cover;
 }
 
-.btn-color {
-    background-color: rebeccapurple;
-    color: white; 
-}
-
-.btn-color:hover {
-    color: deeppink; 
-}
-
 h1 {
     box-sizing: border-box;
-    color: rebeccapurple; 
+    color: mediumpurple;
     font-family: Hole-Hearted;
     font-size: 50px;
-/*
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 2px solid black;
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px;
-    background-color: gray;
-    opacity: .8;
-*/
 }
 
 input {
-    opacity: .7; 
+    opacity: .7;
+}
+
+h3 {
+    font-family: Hole-Hearted;
+}
+
+p {
+    font-family: Hole-Hearted;
 }
 
 h5 {
     box-sizing: border-box;
-    color: #2d6991; 
-    font-family: Hole-Hearted; 
-    font-size: 25px; 
-/*
-    border: 2px solid black; 
-    background-color: gray; 
-    border-radius: 8px; 
-    opacity: .8; 
-    width: 85px; 
-    margin-right: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-*/
-}
-
-.input-border {
-    box-sizing: border-box;
-    width: 350px; 
-    margin-left: auto; 
-    margin-right: auto; 
-}
-
-@font-face {
+    color: #2d6991;
     font-family: Hole-Hearted;
-    src: url("fonts/Hole-Hearted.ttf");
+    font-size: 25px;
+}
+
+.btns {
+    position: sticky; 
+}
+
+.btn-color {
+    background-color: mediumpurple;
+    color: white;
+}
+
+.input-size {
+    box-sizing: border-box; 
+    width: 50%; 
+}
+
+.DocumentList {
+    padding-top: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 350px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.DocumentItem {
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 335px;
+    width: 300px;
+    background-color: white;
+    opacity: .9;
+    margin-left: 53px;
+    margin-right: 53px;
+}
+
+.DocumentItem:hover {
+    background-color: mediumpurple;
+    opacity: .95;
+}
+
+.list-inline {
+    white-space: nowrap;
+}
+
+.top-margin {
+    margin-top: 25px;
 }
