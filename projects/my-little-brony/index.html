@@ -25,22 +25,24 @@
         <section>
             <div class="container input-size">
                 <div class="row">
-                    <form class="form-group" name="topForm" action="">
+                    <form class="form-group" name="frm1" action="">
                         <div>
                             <h5 class="text-center">Name:</h5>
-                            <input id="name" class="form-control" type="text" ng-model="pony.name" required>
+                            <input ng-minlength="3" name="name" class="form-control" type="text" ng-model="pony.name" placeholder="Name" required>
+                            <p class="text-center" style="color: red" ng-show="frm1.name.$invalid && frm1.name.$dirty">Too Short!</p>
                         </div>
                         <div>
                             <h5 class="text-center">Image URL:</h5>
-                            <input class="form-control" type="text" ng-model="pony.imgUrl" required>
+                            <input class="form-control" type="text" name="image" ng-model="pony.imgUrl" placeholder="Image URL" required>
                         </div>
                         <div>
                             <h5 class="text-center">Username:</h5>
-                            <input class="form-control" type="text" ng-model="pony.username" required>
+                            <input class="form-control" type="text" name="user" ng-model="pony.username" placeholder="Username" required>
                         </div>
+
                     </form>
                     <div>
-                        <button id="add" type="button" class="center-block btn btn-color" ng-click="check(pony)">Add Pony</button>
+                        <button ng-hide="frm1.$invalid" type="button" class="center-block btn btn-color" ng-click="check(pony)">Add Pony</button>
                     </div>
                 </div>
             </div>
@@ -52,11 +54,10 @@
                     <div class="DocumentList">
                         <ul class="list-inline">
                             <li class="DocumentItem" ng-repeat="pony in ponies.ponyList track by $index">
-                                <form name="bottomForm">
+                                <form name="frm2">
                                     <div class="form-group">
                                         <span><h3 ng-hide="pony.editing" class="text-center">{{ pony.name }}</h3></span>
-                                        <input ng-show="pony.editing" class="center-block form-control" type="text" placeholder="Name" ng-model="pony.name" required>
-
+                                        <input ng-minlength="3" ng-show="pony.editing" class="center-block form-control" type="text" placeholder="Name" ng-model="pony.name" required>
                                     </div>
                                     <div class="form-group">
                                         <span><img ng-hide="pony.editing" class="center-block" height="125px" width="125px" ng-src="{{ pony.imgUrl }}" alt=""></span>
@@ -67,14 +68,13 @@
                                         <input ng-show="pony.editing" class="center-block form-control" type="text" placeholder="Username" ng-model="pony.username" required>
                                     </div>
                                 </form>
-
                                 <div class="container">
                                     <div class="row">
                                         <div>
                                             <button type="button" ng-hide="pony.editing" ng-click="pony.editing = !pony.editing" class="btn btn-primary glyphicon glyphicon-pencil"></button>
                                         </div>
                                         <div>
-                                            <button type="button" ng-show="pony.editing" ng-click="updatePony(pony, $index)" class="btn btn-success glyphicon glyphicon-floppy-saved"></button>
+                                            <button ng-disabled="frm2.$invalid" type="button" ng-show="pony.editing" ng-click="updatePony(pony, $index)" class="btn btn-success glyphicon glyphicon-floppy-saved"></button>
                                         </div>
                                         <div>
                                             <button type="button" ng-click="deletePony(pony, $index)" class=" btn btn-danger glyphicon glyphicon-remove"></button>
