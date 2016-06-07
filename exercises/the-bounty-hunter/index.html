@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bountyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Bounty Hunter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="">
+</head>
+
+<body ng-controller="BountyController">
+    <main>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <h1 class="text-center">List of Bounties</h1>
+                </div>
+
+            </div>
+        </header>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <form name="formOne">
+                        <div class="form-group">
+                            <input class="form-control center-block input" type="text" placeholder="First Name" ng-model="bounty.firsName">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control center-block input" type="text" placeholder="Last Name" ng-model="bounty.lastName">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control center-block input" type="text" placeholder="Alive? T or F" ng-model="bounty.living">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control center-block input" type="text" placeholder="Price on their head" ng-model="bounty.bountyAmount">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control center-block input" type="text" placeholder="Sith or Jedi" ng-model="bounty.type">
+                        </div>
+                    </form>
+                    <div>
+                        <button class="center-block btn btn-success glyphicon glyphicon-plus" ng-click="addBounty(bounty)"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row" ng-repeat="bounty in bounties.bountyList track by $index">
+                    <div>
+                        <hr>
+                        <div class="form-group">
+                            <h2 ng-hide="editing" class="text-center">{{ bounty.firsName + " " + bounty.lastName }}</h2>
+                            <input class="center-block form-control" ng-show="editing" type="text" required ng-model="bounty.firsName" placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                            <input class="center-block form-control" ng-show="editing" type="text" required ng-model="bounty.lastName" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                            <h3 ng-hide="editing" class="text-center">Living: {{ bounty.living }}</h3>
+                            <input class="center-block form-control" ng-show="editing" type="text" required ng-model="bounty.living" placeholder="Alive? T or F">
+                        </div>
+                        <div class="form-group">
+                            <h3 ng-hide="editing" class="text-center">Price on head: {{ bounty.bountyAmount | currency }}</h3>
+                            <input class="center-block form-control" ng-show="editing" type="text" required ng-model="bounty.bountyAmount" placeholder="Price on their head">
+                        </div>
+                        <div class="form-group">
+                            <h3 ng-hide="editing" class="text-center">Sith or Jedi: {{ bounty.type }}</h3>
+                            <input class="center-block form-control" ng-show="editing" type="text" required ng-model="bounty.type" placeholder="Sith or Jedi">
+                        </div>
+                        <div>
+                            <button class="center-block btn btn-danger glyphicon glyphicon-remove" ng-click="deleteBounty(bounty, $index)"></button>
+                        </div>
+                        <div>
+                            <button ng-click="editing = true" ng-hide="editing" class="center-block btn btn-primary glyphicon glyphicon-pencil"></button>
+                        </div>
+                        <div>
+                            <button ng-show="editing" class="center-block btn btn-success glyphicon glyphicon-floppy-saved" ng-click="updateBounty(bounty, $index); editing = false"></button>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="service.js"></script>
+</body>
+
+</html>
