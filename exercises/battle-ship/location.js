@@ -1,23 +1,21 @@
-function Location(ship) {
-    this.ship = ship;
-    this.hit = false; 
+function Location() {
+    this.ship;
+    this.hit;
     this.display = "";
 }
 
 function numberGenerator() {
     var randomShip = Math.floor(Math.random() * 5) + 1;
-    shipGenerator(randomShip); 
+    shipGenerator(randomShip);
 }
 
 function shipGenerator(num) {
-    var ship; 
     if (num === 1) {
-        ship = true;
+        this.ship = true;
     } else {
-        ship = false;
+        this.ship = false;
     }
-    Location(ship); 
-    console.log(ship); 
+    console.log(ship);
 }
 
 numberGenerator();
