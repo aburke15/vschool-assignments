@@ -1,21 +1,16 @@
 function Location() {
-    this.ship;
-    this.hit;
-    this.display = "";
+    this.ship = shipGenerator(); 
+    this.hit = false; 
+    this.display = "O";
 }
 
 function numberGenerator() {
-    var randomShip = Math.floor(Math.random() * 5) + 1;
-    shipGenerator(randomShip);
+    return Math.floor(Math.random() * 5) + 1; 
 }
 
-function shipGenerator(num) {
-    if (num === 1) {
-        this.ship = true;
-    } else {
-        this.ship = false;
-    }
-    console.log(ship);
+function shipGenerator() {
+    var num = numberGenerator();
+    return num === 1;  
 }
 
-numberGenerator();
+module.exports = Location; 

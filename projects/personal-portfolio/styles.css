@@ -1,0 +1,77 @@
+.no-list-style {
+    list-style: none; 
+    padding: 0px;
+}
+
+.list-margin {
+    margin-bottom: 20px;
+}
+
+.name-color {
+    color: white; 
+}
+
+.list-inline {
+    display: inline;
+}
+
+.list-color-A {
+    color: grey;
+    text-decoration: none;
+    font-size: 18px
+}
+
+.list-color-A:hover {
+    color: white;
+    padding-top: 10px;
+    text-decoration: underline; 
+    text-decoration-color: #25AE90;
+}
+
+.list-decor-A:hover {
+    
+}
+
+.list-color-B {
+    font-size: 23px;
+    color: grey;
+}
+
+.list-color-B:hover {
+    color: grey;
+}
+
+.nav-margin {
+    margin-top: 30px;
+}
+
+.profile-img {
+    margin-top: 25px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+
+.top-nav {
+    padding-top: 10px; 
+}
+
+.nav-bar {
+    margin-top: -50.25px; 
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    border: 1px solid black;
+    background-color: #262626;
+    height: 2000px;
+}
+
+.top-bar {
+    box-sizing: border-box;
+    margin-left: 149px;
+    height: 50px; 
+    border: 1px solid lightgrey;
+    width: 100%; 
+    z-index: 1;
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolioApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="">
+</head>
+
+<body>
+
+    <header ng-controller="NavController">
+
+        <aside>
+            <div class="top-bar top-nav">
+                <ul>
+                    <a class="list-inline list-color-B">
+                        <li>Home</li>
+                    </a>
+                    <a class="list-inline list-color-B" ng-show="">
+                        <li>About</li>
+                    </a>
+                    <a class="list-inline list-color-B" ng-show="">
+                        <li>Projects</li>
+                    </a>
+                </ul>
+            </div>
+        </aside>
+
+        <aside>
+            <div class="nav-bar">
+               <img class="center-block profile-img" src="img/my-picture-portfolio.jpg" alt="">
+               <h3 class="text-center name-color">Andre Burke</h3>
+                <ul class="text-center nav-margin no-list-style">
+                    <a class="list-color-A list-decor-A" href="#home">
+                        <li class="list-margin">Home</li>
+                    </a>
+                    <a class="list-color-A list-decor-A" href="#about">
+                        <li class="list-margin">About</li>
+                    </a>
+                    <a class="list-color-A list-decor-A" href="#projects">
+                        <li class="list-margin">Projects</li>
+                    </a>
+                </ul>
+            </div>
+        </aside>
+
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div ng-view=""></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="home/home.js"></script>
+    <script src="about/about.js"></script>
+    <script src="projects/projects.js"></script>
+    <script src="navController.js"></script>
+</body>
+
+</html>
