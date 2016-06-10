@@ -1,18 +1,18 @@
-var app = angular.module("portfolioApp", ["ngRoute"]);
+var app = angular.module("portfolioApp", ["ngRoute", "ui.bootstrap"]);
 
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/home", {
             templateUrl: "home/home.html",
-            contoller: "HomeController"
-        })
-        .when("/projects", {
-            templateUrl: "projects/projects.html",
-            contoller: "ProjectsController"
+            controller: "HomeController"
         })
         .when("/about", {
             templateUrl: "about/about.html",
             controller: "AboutController"
+        })
+        .when("/projects", {
+            templateUrl: "projects/projects.html",
+            controller: "ProjectsController"
         })
         .otherwise({
             redirectTo: "/home"

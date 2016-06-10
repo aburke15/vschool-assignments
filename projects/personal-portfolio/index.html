@@ -8,32 +8,31 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="">
+    <link rel="icon" href="http://www.favicon.cc/logo3d/492187.png">
 </head>
 
 <body>
 
-    <header ng-controller="NavController">
+    <section ng-controller="NavController">
+           
+            <header>
+                <aside>
+                    <div class="top-bar top-nav">
+                        <ul>
+                            <a class="list-inline list-color-B" ng-hide="isActive('/about') || isActive('/projects')">
+                                <li>Home</li>
+                            </a>
+                            <a class="list-inline list-color-B" ng-hide="isActive('/home') || isActive('/projects')">
+                                <li>About</li>
+                            </a>
+                            <a class="list-inline list-color-B" ng-hide="isActive('/about') || isActive('/home')">
+                                <li>Projects</li>
+                            </a>
+                        </ul>
+                    </div>
+                </aside>
 
-        <aside>
-            <div class="top-bar top-nav">
-                <ul>
-                    <a class="list-inline list-color-B" ng-hide="isActive('/about') || isActive('/projects')">
-                        <li>Home</li>
-                    </a>
-                    <a class="list-inline list-color-B" ng-hide="isActive('/home') || isActive('/projects')">
-                        <li>About</li>
-                    </a>
-                    <a class="list-inline list-color-B" ng-hide="isActive('/about') || isActive('/home')">
-                        <li>Projects</li>
-                    </a>
-                </ul>
-            </div>
-        </aside>
-
-       
-            <div class="container col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-bar">
-                <div class="row">
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-bar">
                     <a href="#/about"><img class="center-block profile-img" src="img/my-picture-portfolio.jpg" alt=""></a>
                     <h3 class="text-center name-color">Andre Burke</h3>
                     <ul class="text-center nav-margin no-list-style">
@@ -54,21 +53,21 @@
                         </div>
                     </ul>
                 </div>
-            </div>
-        
+            </header>
 
-    </header>
+            <main class="container-fluid">
+                <div class="row">
+                    <div ng-view=""></div>
+                </div>
+            </main>
 
-    <main>
-        <div class="container">
-            <div class="row">
-                <div ng-view=""></div>
-            </div>
-        </div>
-    </main>
+    </section>
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
     <script src="app.js"></script>
     <script src="home/home.js"></script>
     <script src="about/about.js"></script>

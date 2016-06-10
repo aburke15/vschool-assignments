@@ -1,5 +1,12 @@
-<div>
-    <div>
-        
+<div class="slides-control">
+    <div class="slides-control-div">
+        <carousel class="center-block" interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img class="center-block" ng-src="{{ slide.image }}">
+                <div class="carousel-caption">
+                    <div>Project {{ $index + 1 }}</div>
+                </div>
+            </slide>
+        </carousel>
     </div>
 </div>

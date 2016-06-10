@@ -1,9 +1,23 @@
-main {
-    margin-left: 150px; 
+font-face {
+    font-family: Cinzel-Regular;
+    src: url(fonts/Cinzel-Regular.otf);
+}
+
+body {
+    font-family: Cinzel-Regular;
+}
+
+.about-div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-font {
+    font-size: 40px;
 }
 
 .icon-size {
-    margin-top: 20px; 
+    margin-top: 20px;
     font-size: 40px;
     color: grey;
 }
@@ -13,7 +27,7 @@ main {
 }
 
 .no-list-style {
-    list-style: none; 
+    list-style: none;
     padding: 0px;
 }
 
@@ -22,7 +36,7 @@ main {
 }
 
 .name-color {
-    color: white; 
+    color: white;
 }
 
 .list-inline {
@@ -36,16 +50,17 @@ main {
 }
 
 .list-color-A:active {
-    color: #25AE90;
+    color: plum;
 }
 
 .list-decor-A:hover {
-    
+    color: #25AE90;
 }
 
 .list-color-B {
     font-size: 23px;
     color: grey;
+    margin-left: 150px;
 }
 
 .list-color-B:hover {
@@ -64,15 +79,15 @@ main {
 }
 
 .profile-img:hover {
-    opacity: .8; 
+    opacity: .8;
 }
 
 .top-nav {
-    padding-top: 10px; 
+    padding-top: 10px;
 }
 
 .nav-bar {
-    margin-top: -50.25px; 
+    margin-top: -50.25px;
     width: 150px;
     height: 100%;
     z-index: 2;
@@ -83,10 +98,22 @@ main {
 
 .top-bar {
     box-sizing: border-box;
-    margin-left: 149px;
-    height: 50px; 
+    height: 50px;
     border: 1px solid lightgrey;
-    width: 100%; 
+    width: 100%;
     z-index: 1;
 }
 
+.slides-control-div {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slides-control {
+    height: auto;
+    width: 100%;
+    top: 20px;
+    padding-left: 150px;
+    margin-right: -7.50px;
+}
