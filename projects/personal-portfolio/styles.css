@@ -1,3 +1,17 @@
+main {
+    margin-left: 150px; 
+}
+
+.icon-size {
+    margin-top: 20px; 
+    font-size: 40px;
+    color: grey;
+}
+
+.icon-size:hover {
+    color: #25AE90;
+}
+
 .no-list-style {
     list-style: none; 
     padding: 0px;
@@ -21,11 +35,8 @@
     font-size: 18px
 }
 
-.list-color-A:hover {
-    color: white;
-    padding-top: 10px;
-    text-decoration: underline; 
-    text-decoration-color: #25AE90;
+.list-color-A:active {
+    color: #25AE90;
 }
 
 .list-decor-A:hover {
@@ -50,6 +61,10 @@
     height: 100px;
     width: 100px;
     border-radius: 50px;
+}
+
+.profile-img:hover {
+    opacity: .8; 
 }
 
 .top-nav {

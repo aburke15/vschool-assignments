@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="">
 </head>
@@ -17,36 +18,44 @@
         <aside>
             <div class="top-bar top-nav">
                 <ul>
-                    <a class="list-inline list-color-B">
+                    <a class="list-inline list-color-B" ng-hide="isActive('/about') || isActive('/projects')">
                         <li>Home</li>
                     </a>
-                    <a class="list-inline list-color-B" ng-show="">
+                    <a class="list-inline list-color-B" ng-hide="isActive('/home') || isActive('/projects')">
                         <li>About</li>
                     </a>
-                    <a class="list-inline list-color-B" ng-show="">
+                    <a class="list-inline list-color-B" ng-hide="isActive('/about') || isActive('/home')">
                         <li>Projects</li>
                     </a>
                 </ul>
             </div>
         </aside>
 
-        <aside>
-            <div class="nav-bar">
-               <img class="center-block profile-img" src="img/my-picture-portfolio.jpg" alt="">
-               <h3 class="text-center name-color">Andre Burke</h3>
-                <ul class="text-center nav-margin no-list-style">
-                    <a class="list-color-A list-decor-A" href="#home">
-                        <li class="list-margin">Home</li>
-                    </a>
-                    <a class="list-color-A list-decor-A" href="#about">
-                        <li class="list-margin">About</li>
-                    </a>
-                    <a class="list-color-A list-decor-A" href="#projects">
-                        <li class="list-margin">Projects</li>
-                    </a>
-                </ul>
+       
+            <div class="container col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-bar">
+                <div class="row">
+                    <a href="#/about"><img class="center-block profile-img" src="img/my-picture-portfolio.jpg" alt=""></a>
+                    <h3 class="text-center name-color">Andre Burke</h3>
+                    <ul class="text-center nav-margin no-list-style">
+                        <a class="list-color-A list-decor-A" href="#/home">
+                            <li class="list-margin">Home</li>
+                        </a>
+                        <a class="list-color-A list-decor-A" href="#/about">
+                            <li class="list-margin">About</li>
+                        </a>
+                        <a class="list-color-A list-decor-A" href="#/projects">
+                            <li class="list-margin">Projects</li>
+                        </a>
+                        <div>
+                            <li><a href="https://github.com/aburkex24" target="_blank"><i class="fa fa-github icon-size"></i></a></li>
+                        </div>
+                        <div>
+                            <li><a href="https://www.linkedin.com/in/aburke24" target="_blank"><i class="fa fa-linkedin icon-size"></i></a></li>
+                        </div>
+                    </ul>
+                </div>
             </div>
-        </aside>
+        
 
     </header>
 
