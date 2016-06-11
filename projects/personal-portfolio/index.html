@@ -31,13 +31,16 @@
                         </ul>
                     </div>
                 </aside>
+                
+                <div>
+                    <a class="menu-space" href="" ng-click="myNav={ 'display': 'block' }; myNav={ 'display': 'none' }">
+                        <img class="menu-toggle" src="https://cdn.css-tricks.com/wp-content/uploads/2012/10/threelines.png" height="50px" width="50px" alt="">
+                    </a>
+                </div>
 
-                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-bar">
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-bar" ng-style="myNav">
                     <a href="#/about"><img class="center-block profile-img" src="img/my-picture-portfolio.jpg" alt=""></a>
                     <h3 class="text-center name-color">Andre Burke</h3>
-                    <a href="">
-                        <img class="menu-toggle" src="https://cdn.css-tricks.com/wp-content/uploads/2012/10/threelines.png" height="75px" width="75px" alt="">
-                    </a>
                     <ul class="text-center nav-margin no-list-style">
                         <a class="list-color-A list-decor-A" href="#/home">
                             <li class="list-margin">Home</li>

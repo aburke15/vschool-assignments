@@ -7,12 +7,17 @@ body {
     font-family: Cinzel-Regular;
 }
 
-.menu-space {
-    
+.view-top-margin {
+    margin-top: 100px; 
 }
 
 .menu-toggle {
-    border-radius: 10px; 
+    margin-top: 3px;
+    border-radius: 10px;
+    border: 2px solid black;
+    position: fixed; 
+    z-index: 4; 
+    margin-left: 150px; 
 }
 
 .about-div {
@@ -122,6 +127,24 @@ body {
     height: auto;
     width: 100%;
     top: 20px;
-    padding-left: 150px;
+    
     margin-right: -7.50px;
+}
+
+@media (max-width: 700px) and (min-width: 0px) {
+    .nav-bar {
+        display: none; 
+    }
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+    .menu-toggle {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 700px) {
+    .list-color-B {
+        margin-left: 0px;
+    }
 }
