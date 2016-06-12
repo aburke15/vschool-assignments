@@ -14,31 +14,32 @@
 <body>
 
     <section ng-controller="NavController">
-           
-            <header>
+
+        <header>
+            <section>
                 <aside>
-                    <div class="top-bar top-nav">
+                    <div class="top-bar">
                         <ul>
-                            <a class="list-inline list-color-B" ng-hide="isActive('/about') || isActive('/projects')">
+                            <a class="list-inline list-color-B top-nav" ng-hide="isActive('/about') || isActive('/projects')">
                                 <li>Home</li>
                             </a>
-                            <a class="list-inline list-color-B" ng-hide="isActive('/home') || isActive('/projects')">
+                            <a class="list-inline list-color-B top-nav" ng-hide="isActive('/home') || isActive('/projects')">
                                 <li>About</li>
                             </a>
-                            <a class="list-inline list-color-B" ng-hide="isActive('/about') || isActive('/home')">
+                            <a class="list-inline list-color-B top-nav" ng-hide="isActive('/about') || isActive('/home')">
                                 <li>Projects</li>
+                            </a>
+                            <a class="menu-space" href="" ng-click="navbar = !navbar">
+                                <img class="menu-toggle" src="https://cdn.css-tricks.com/wp-content/uploads/2012/10/threelines.png" height="45px" width="45px" alt="">
                             </a>
                         </ul>
                     </div>
                 </aside>
-                
-                <div>
-                    <a class="menu-space" href="" ng-click="myNav={ 'display': 'block' }; myNav={ 'display': 'none' }">
-                        <img class="menu-toggle" src="https://cdn.css-tricks.com/wp-content/uploads/2012/10/threelines.png" height="50px" width="50px" alt="">
-                    </a>
-                </div>
+            </section>
 
-                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-bar" ng-style="myNav">
+
+            <section>
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-bar" ng-hide="navbar">
                     <a href="#/about"><img class="center-block profile-img" src="img/my-picture-portfolio.jpg" alt=""></a>
                     <h3 class="text-center name-color">Andre Burke</h3>
                     <ul class="text-center nav-margin no-list-style">
@@ -59,13 +60,14 @@
                         </div>
                     </ul>
                 </div>
-            </header>
+            </section>
+        </header>
 
-            <main class="container-fluid">
-                <div class="row">
-                    <div ng-view=""></div>
-                </div>
-            </main>
+        <main class="container-fluid">
+            <div class="row">
+                <div ng-view=""></div>
+            </div>
+        </main>
 
     </section>
 

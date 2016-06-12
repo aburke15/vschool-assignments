@@ -4,4 +4,5 @@ app.controller("NavController", ["$scope", "$location", function($scope, $locati
     $scope.isActive = function(viewLocation) {
         return viewLocation === $location.path(); 
     }
+    $scope.navbar = false; 
 }]);
