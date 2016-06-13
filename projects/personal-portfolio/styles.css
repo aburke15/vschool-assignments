@@ -7,6 +7,23 @@ body {
     font-family: Cinzel-Regular;
 }
 
+.class {
+    display: inline-block; 
+}
+
+.main-img {
+    height: auto;
+    width: 350px;
+}
+
+.skill-icon-margin {
+    margin-top: 10px; 
+}
+
+.skill-margin {
+    margin-top: 30px;
+}
+
 .view-content-margin {
     margin-top: 75px; 
 }
@@ -15,21 +32,11 @@ body {
     margin-top: 40px; 
 }
 
-.menu-toggle {
-    float: right; 
-}
-
-.about-div {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .home-font {
     font-size: 40px;
 }
 
 .icon-size {
-    margin-top: 20px;
     font-size: 40px;
     color: grey;
 }
@@ -48,44 +55,38 @@ body {
 }
 
 .name-color {
-    color: white;
+    color: white; 
 }
 
-.list-inline {
+.list-right {
     display: inline;
+    float: right; 
 }
 
-.list-color-A {
+.list-left {
+    display: inline; 
+    float: left; 
+}
+
+.list-color {
     color: grey;
     text-decoration: none;
     font-size: 18px
 }
 
-.list-color-A:active {
+.list-color:active {
     color: plum;
 }
 
-.list-decor-A:hover {
+.list-decor:hover {
     color: #25AE90;
 }
 
-.list-color-B {
-    font-size: 23px;
-    color: grey;
-}
-
-.list-color-B:hover {
-    color: grey;
-}
-
-.nav-margin {
-    margin-top: 30px;
-}
-
 .profile-img {
-    margin-top: 25px;
-    height: 100px;
-    width: 100px;
+    margin-top: 16.5px;
+    margin-left: 10px; 
+    height: 75px;
+    width: 75px;
     border-radius: 50px;
 }
 
@@ -93,58 +94,11 @@ body {
     opacity: .8;
 }
 
-.top-nav {
-    padding-top: 10px;
-}
-
-.nav-bar {
-    margin-top: -50.25px;
-    width: 150px;
-    height: 100%;
-    border: 1px solid black;
-    background-color: #262626;
-    height: 2000px;
-}
-
 .top-bar {
-    box-sizing: border-box;
-    height: 50px;
+    background-color: #262626; 
+    height: 110px;
     border: 1px solid lightgrey;
     width: 100%;
+    position: fixed; 
+    z-index: 1; 
 }
-
-.slides-control-div {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.slides-control {
-    height: auto;
-    width: 100%;
-    top: 20px;
-    margin-right: -7.50px;
-}
-
-/*
-@media (max-width: 700px) and (min-width: 0px) {
-    .nav-bar {
-        display: none; 
-    }
-}
-*/
-
-/*
-@media (min-width: 0px) and (max-width: 700px) {
-    .menu-toggle {
-        margin-left: 0px;
-    }
-}
-*/
-
-/*
-@media (min-width: 0px) and (max-width: 700px) {
-    .list-color-B {
-        margin-left: 0px;
-    }
-}*/

@@ -15,45 +15,83 @@
 
     <section ng-controller="NavController">
 
-        <header>
-            <section>
+        <header class="container-fluid">
+
+            <section class="row">
                 <div class="top-bar">
-                    <a class="menu-space" href="" ng-click="navbar = !navbar">
-                        <img class="menu-toggle" src="https://cdn.css-tricks.com/wp-content/uploads/2012/10/threelines.png" height="45px" width="45px" alt="">
+
+                    <a class="class" href="#/about">
+                        <img class="profile-img" src="img/my-picture-portfolio.jpg" alt="">
+                        <h3 class="name-color">Andre Burke</h3>
                     </a>
+
                 </div>
             </section>
 
-
-            <section>
-                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 nav-bar" ng-hide="navbar">
-                    <a href="#/about"><img class="center-block profile-img" src="img/my-picture-portfolio.jpg" alt=""></a>
-                    <h3 class="text-center name-color">Andre Burke</h3>
-                    <ul class="text-center nav-margin no-list-style">
-                        <a class="list-color-A list-decor-A" href="#/home">
-                            <li class="list-margin">Home</li>
-                        </a>
-                        <a class="list-color-A list-decor-A" href="#/about">
-                            <li class="list-margin">About</li>
-                        </a>
-                        <a class="list-color-A list-decor-A" href="#/projects">
-                            <li class="list-margin">Projects</li>
-                        </a>
-                        <div>
-                            <li><a href="https://github.com/aburkex24" target="_blank"><i class="fa fa-github icon-size"></i></a></li>
-                        </div>
-                        <div>
-                            <li><a href="https://www.linkedin.com/in/aburke24" target="_blank"><i class="fa fa-linkedin icon-size"></i></a></li>
-                        </div>
-                    </ul>
-                </div>
-            </section>
         </header>
 
-        <main class="container-fluid">
-            <div class="row">
-                <div ng-view=""></div>
-            </div>
+        <main class="container">
+            <section class="row">
+                <div class="view-top-margin">
+                    <div>
+                        <h1 class="text-center home-font">Welcome to my Portfolio!</h1>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row">
+                <div class="view-top-margin">
+
+                    <div>
+                        <h2 class="text-center">Just a Page About Me</h2>
+                    </div>
+
+                    <div class="view-content-margin">
+
+                        <div class="col-xl-5 col-lg-6 col-md-5 col-sm-5 col-xs-6">
+                            <img class="img-responsive main-img" src="img/my-picture-portfolio.jpg">
+                        </div>
+
+                        <div class="col-xs-5">
+                            <p class="text-center">My name is Andre</p>
+                        </div>
+
+                        <div class="panel panel-default col-lg-6">
+
+                            <div class="panel-heading"><b>Skills:</b></div>
+
+                            <table class="table">
+                                <tr>
+                                    <td>HTML5</td>
+                                    <td><img class="" src="https://lh3.ggpht.com/N8lDdPBD-ZyHNADNAUyXjyXDCEqO1Q_iBHpNBfxEpd-rHArTXypYC98RQeIJ_58tTWU=w300" height="35px" width="45px" alt=""></td>
+                                </tr>
+                                <tr>
+                                    <td>CSS3</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="panel panel-default col-lg-6">
+                            <div class="panel-heading"></div>
+
+                            <ul class="list-group">
+                                <li class="list-group-item text-center">HTML5 <img class="" src="https://lh3.ggpht.com/N8lDdPBD-ZyHNADNAUyXjyXDCEqO1Q_iBHpNBfxEpd-rHArTXypYC98RQeIJ_58tTWU=w300" height="35px" width="45px" alt=""> CSS3 <img class="" src="http://jqueryto.com/2013/assets/i/icon-css.png" height="35px" width="40px" alt=""> JavaScript <img class="" src="img/Mmww2.png" height="35px" width="40px" alt="">
+                                </li>
+                                <li class="list-group-item text-center">AngularJs <img class="" height="35px" width="40px" src="https://angular.io/resources/images/logos/standard/shield-large.png" alt=""> JQuery <img class="" height="35px" width="40px" src="https://zohodiscussions.com/discussions/getCustomFile.do?fileId=14737000006454738&forumGroupId=14737000000003003" alt=""> ExpressJs <img class="" height="35px" width="70px" src="img/express.png" alt="">
+                                </li>
+                                <li class="list-group-item text-center">NodeJs <img class="" src="img/nodejs.png" height="35px" width="70px" alt=""> MongoDB <img class="" src="img/mongodb-logo1.png" height="35px" width="70px" alt=""> Git <img class="" src="img/git.png" height="35px" width="70px" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="row">
+            
+            </section>
         </main>
 
     </section>
