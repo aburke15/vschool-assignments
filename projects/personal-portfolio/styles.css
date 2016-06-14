@@ -7,21 +7,25 @@ body {
     font-family: Cinzel-Regular;
 }
 
-.class {
-    display: inline-block; 
+.top-height {
+    height: auto; 
+}
+
+.about-row {
+    margin-left: auto;
+    margin-right: auto; 
+    background-color: lightgrey;
+    border: 1px solid black; 
+}
+
+.name {
+    color: white;
 }
 
 .main-img {
     height: auto;
-    width: 350px;
-}
-
-.skill-icon-margin {
-    margin-top: 10px; 
-}
-
-.skill-margin {
-    margin-top: 30px;
+    margin-left: 0px;  
+    width: 400px;
 }
 
 .view-content-margin {
@@ -29,57 +33,7 @@ body {
 }
 
 .view-top-margin {
-    margin-top: 40px; 
-}
-
-.home-font {
-    font-size: 40px;
-}
-
-.icon-size {
-    font-size: 40px;
-    color: grey;
-}
-
-.icon-size:hover {
-    color: #25AE90;
-}
-
-.no-list-style {
-    list-style: none;
-    padding: 0px;
-}
-
-.list-margin {
-    margin-bottom: 20px;
-}
-
-.name-color {
-    color: white; 
-}
-
-.list-right {
-    display: inline;
-    float: right; 
-}
-
-.list-left {
-    display: inline; 
-    float: left; 
-}
-
-.list-color {
-    color: grey;
-    text-decoration: none;
-    font-size: 18px
-}
-
-.list-color:active {
-    color: plum;
-}
-
-.list-decor:hover {
-    color: #25AE90;
+    margin-top: 150px; 
 }
 
 .profile-img {
