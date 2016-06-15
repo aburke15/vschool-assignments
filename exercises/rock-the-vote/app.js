@@ -4,4 +4,11 @@ app.controller("VoteController", ["$scope", "VoteService", function($scope, Vote
     $scope.posts = VoteService; 
     
     VoteService.getPosts().then( function(response) {}); 
+    
+    $scope.addPost = function(post) {
+        VoteService.addPost(post).then(function(response) {
+            $scope.post = {}; 
+        });
+    }
+    
 }]);

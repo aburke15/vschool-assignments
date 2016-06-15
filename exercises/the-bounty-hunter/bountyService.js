@@ -1,7 +1,7 @@
 var app = angular.module("bountyApp");
 
 app.service("BountyService", ["$http", function ($http) {
-    var baseUrl = "http://localhost:8000/bounty/";
+    var baseUrl = "http://localhost:3000/bounty/";
     var self = this;
     this.bountyList = [];
 
@@ -19,7 +19,7 @@ app.service("BountyService", ["$http", function ($http) {
     }
 
     this.deleteBounty = function (bounty, index) {
-        return $http.delete(baseUrl + bounty.id).then(function (response) {
+        return $http.delete(baseUrl + bounty._id).then(function (response) {
             var confirmed = confirm("Are you sure you want to delete this bounty?");
             if (confirmed) {
                 self.bountyList.splice(index, 1);
@@ -28,7 +28,7 @@ app.service("BountyService", ["$http", function ($http) {
     }
 
     this.updateBounty = function (bounty, index) {
-        return $http.put(baseUrl + bounty.id, bounty).then(function (response) {
+        return $http.put(baseUrl + bounty._id, bounty).then(function (response) {
             self.bountyList[index] = response.data;
         });
     }

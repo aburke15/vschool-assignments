@@ -24,7 +24,7 @@
                 <div class="row">
                     <form name="formOne">
                         <div class="form-group">
-                            <input class="form-control center-block input" type="text" placeholder="First Name" ng-model="bounty.firsName">
+                            <input class="form-control center-block input" type="text" placeholder="First Name" ng-model="bounty.firstName">
                         </div>
                         <div class="form-group">
                             <input class="form-control center-block input" type="text" placeholder="Last Name" ng-model="bounty.lastName">
@@ -52,8 +52,8 @@
                     <div>
                         <hr>
                         <div class="form-group">
-                            <h2 ng-hide="editing" class="text-center">{{ bounty.firsName + " " + bounty.lastName }}</h2>
-                            <input class="center-block form-control" ng-show="editing" type="text" required ng-model="bounty.firsName" placeholder="First Name">
+                            <h2 ng-hide="editing" class="text-center">{{ bounty.firstName + " " + bounty.lastName }}</h2>
+                            <input class="center-block form-control" ng-show="editing" type="text" required ng-model="bounty.firstName" placeholder="First Name">
                         </div>
                         <div class="form-group">
                             <input class="center-block form-control" ng-show="editing" type="text" required ng-model="bounty.lastName" placeholder="Last Name">
@@ -87,7 +87,7 @@
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="app.js"></script>
-    <script src="service.js"></script>
+    <script src="bountyService.js"></script>
 </body>
 
 </html>

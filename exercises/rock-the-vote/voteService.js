@@ -1,7 +1,7 @@
 var app = angular.module("voteApp"); 
 
 app.service("VoteService", ["$http", function($http) {
-    var baseUrl = "http://localhost:3000/post/"
+    var baseUrl = "http://localhost:3000/posts/"
     var self = this; 
     this.postList = []; 
     
@@ -11,4 +11,9 @@ app.service("VoteService", ["$http", function($http) {
         });
     }
     
+    this.addPost = function(post) {
+        return $http.post(baseUrl, post).then(function(response) {
+            self.postList.push(response.data); 
+        });
+    }
 }]);

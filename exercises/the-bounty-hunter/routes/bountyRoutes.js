@@ -1,33 +1,37 @@
 var express = require("express");
+var app = express(); 
 var bountyRoutes = express.Router();
-var bounties = require("../models/bounties");
-var uuid = require("uuid");
+var Bounties = require("../models/bounties");
+
 
 bountyRoutes.route("/").get(function(req, res) {
-    res.send(bounties);
+    Bounties.find(function (err, bounties) {
+        if(err) res.status(500).send(err);  
+        else res.send(bounties);
+    });
     console.log("retrieved");
 }).post(function (req, res) {
-    req.body.id = uuid.v1();
-    bounties.push(req.body);
-    res.send(req.body);
+    var newBounty = Bounties(req.body);
+    newBounty.save(function(err, bounty) {
+        if (err) res.status(500).send(err);  
+        else res.send(bounty); 
+    });
 });
 
 bountyRoutes.route("/:id").delete(function(req, res) {
-    for (var i = 0; i < bounties.length; i++) {
-        if (bounties[i].id === req.params.id) {
-            bounties.splice(i, 1);
-            return res.send("Bounty deleted");
+    Bounties.findByIdAndRemove(req.params.id, function(err, bounty) {
+        var response = {
+            message: "Bounty deleted",
+            id: bounty._id
         }
-    }
-    res.send("No bounty with that ID");
+        res.send(response); 
+    });
 }).put(function(req, res) {
-    for (var i = 0; i < bounties.length; i++) {
-        if (bounties[i].id === req.params.id) {
-            bounties[i] = req.body;
-            return res.send(bounties[i]);
-        }
-    }
-    res.send("No bounty with that ID");
+    Bounties.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, bounty) {
+        if(err) res.status(500).send(err)
+        else bounty.save();
+        res.send(bounty); 
+    });
 });
 
 module.exports = bountyRoutes;
