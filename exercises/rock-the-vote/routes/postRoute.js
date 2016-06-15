@@ -18,6 +18,23 @@ postRoute.route("/").get(function(req, res) {
     });
 });
 
+postRoute.route("/:id").delete(function(req, res) {
+    Post.findByIdAndRemove(req.params.id, function(err, post) {
+        if (err) res.status(500).send(err);
+        else
+        var response = {
+            message: "Item deleted",
+            id: post._id 
+        }
+        res.send(response); 
+    });
+}).put(function(req, res) {
+    Post.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, post) {
+        if (err) res.status(500).send(err);
+        else post.save(); 
+        res.send(post); 
+    });
+});
 //app.delete("/posts/:postsId", function (req, res) {
 //    for (var i = 0; i < postList.length; i++) {
 //        if (postList[i].id === req.params.postsId) {

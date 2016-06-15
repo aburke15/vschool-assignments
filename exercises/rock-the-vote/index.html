@@ -27,7 +27,7 @@
                             <textarea class="center-block form-control input-width" name="" id="" cols="20" rows="4" placeholder="Description" ng-model="post.description"></textarea>
                         </div>
                         <div>
-                            <button class="center-block btn btn-primary form-control btn-width" ng-click="addPost(post)">Add Post</button>
+                            <button class="center-block btn btn-primary  btn-width" ng-click="addPost(post)">Add Post</button>
                         </div>
                     </form>
                 </div>
@@ -48,13 +48,26 @@
                         </div>
                         <div class="form-group">
                             <h4 class="text-center">{{ post.description }}</h4>
-                            <textarea class="form-control center-block input-width" ng-show="" name="" id="" cols="30" rows="4" ng-model="post.description"></textarea>
-                            <div>
-                                <p ng-repeat="item in post.comments" class="text-center">{{ item.comment }}</p>
-                            </div>
                         </div>
-                    </form>
+                        <div>
+                            <textarea class="form-control center-block input-width" ng-show="" name="" id="" cols="30" rows="4" ng-model="post.description"></textarea>
+                        </div>
+                        <div>
+                            <h5 class="text-center">Comments:</h5>
+                        </div>
+                        <div>
+                            <textarea class="form-control center-block input-width" name="" id="" cols="30" rows="3" placeholder="Add Comment"></textarea>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary center-block form-control btn-width" ng-click="addComment(comment)">Post Comment</button>
+                        </div>
+                        <div>
+                            <p ng-repeat="item in post.comments" class="text-center">{{ item.comment }} <a href=""><span class="glyphicon glyphicon-remove span-margin"></span></a>
+                            <a href=""><span class="glyphicon glyphicon-pencil span-margin"></span></a></p>
+                        </div>
                 </div>
+                </form>
+            </div>
             </div>
         </section>
     </main>
@@ -65,18 +78,3 @@
 </body>
 
 </html>
-
-
-<h1><b>OnePlus X White Excellent Condition</b></h1>
-<br>
-<p>This the U.S. version of the Oneplus X and I was using it on T-Mobile's LTE service. You may have to check the bands to see if this device will work in your area. This device is in great condition I did notice that there is a very small knick on the metal frame on the top right corner of the device and also the bottom left corner. They are too small to take a picture of. Screen is in perfect condition. Below this will include..</p>
-<ul>
-    <li>10,000 mAh Oneplus batter pack</li>
-    <li>Oneplus clear rubber case</li>
-    <li>Oneplus Rosewood case</li>
-    <li>Two A/C wall adapters</li>
-    <li>One 100cm red micro USB cable</li>
-    <li>One 150cm red micro USB cable</li>
-</ul>
-<br>
-<p>If you have any additional questions, please message me, thank you.</p>

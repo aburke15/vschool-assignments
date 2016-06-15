@@ -2,12 +2,24 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema; 
 
 var postSchema = new Schema({
-    title: String, 
-    description: String,
-    votes: Number,
+    title: {
+        type: String,
+        required: true
+    }, 
+    description: {
+        type: String,
+        required: true
+    },
+    votes: {
+        type: Number,
+        required: true
+    }, 
     comments: [
         {
-            comment: String
+            comment: {
+                type: String,
+                required: false
+            }
         }
     ]
 });
