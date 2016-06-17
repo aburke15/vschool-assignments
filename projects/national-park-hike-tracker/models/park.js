@@ -10,11 +10,23 @@ var parkSchema = new Schema ({
         type: String,
         required: true
     },
+    date: {
+        type: Date,
+        default: Date.now
+    },
     images: [
         {
             image: {
                 type: String,
                 required: true
+            },
+            votes: {
+                type: Number,
+                required: false
+            },
+            date: {
+                type: Date,
+                default: Date.now
             }
         }
     ]
