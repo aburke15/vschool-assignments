@@ -1,33 +1,17 @@
 var mongoose = require("mongoose");
 var Schema = mongoose.Schema; 
 
-var parkSchema = new Schema ({
-    title: {
-        type: String,
-        required: true
-    },
-    body: {
-        type: String,
-        required: true
-    },
-    date: {
-        type: Date,
-        default: Date.now
-    },
+var parkSchema = new Schema({
+    body: String,
+    length: String,
+    date: String,
+    votes: Number,
+    location: String,
     images: [
         {
-            image: {
-                type: String,
-                required: true
-            },
-            votes: {
-                type: Number,
-                required: false
-            },
-            date: {
-                type: Date,
-                default: Date.now
-            }
+            image: String,
+            date: String,
+            votes: Number
         }
     ]
 });
