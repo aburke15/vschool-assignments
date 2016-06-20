@@ -1,0 +1,71 @@
+@font-face {
+    font-family: HorsebackSlab-Bold;
+    src: url("/fonts/HorsebackSlab-Bold.ttf"); 
+}
+
+body {
+    background: url("http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/01/arches-Wallpaper-HD-Desktop-Background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+     
+}
+
+.nav-bar {
+    font-family: HorsebackSlab-Bold;
+    position: fixed;
+    box-sizing: border-box;
+    height: auto;
+    border: 1px solid grey;
+    background-color: black;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-style {
+    list-style-type: none; 
+}
+
+.nav-style ul {
+    text-align: center;
+    padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.nav-style ul li {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    
+}
+
+.nav-style ul li a {
+    text-decoration: none;
+    color: floralwhite;
+}
+
+.search {
+    display: inline-block;
+    float: right;
+    font-style: italic;
+    border-radius: 0px;
+    margin-top: -30.55px; 
+    margin-right: 10px;
+    width: 200px;
+    z-index: 2;
+}
+
+.home-margin {
+    margin-top: 100px;
+    border-radius: 0px; 
+}
+
+@media (max-width: 765px) {
+    .search {
+        display: none; 
+    }
+}

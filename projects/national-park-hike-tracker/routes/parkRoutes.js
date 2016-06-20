@@ -34,6 +34,12 @@ parkRoutes.route("/:id").delete(function(req, res) {
         res.send(park);
     });
     console.log("Successfully updated"); 
+}).get(function(req, res) {
+    Park.findOne(req.params.id, function(err, park) {
+        if (err) res.status(500).send(err);
+        else res.send(park); 
+    });
+    console.log("Successfully retrieved id"); 
 });
 
 module.exports = parkRoutes;
