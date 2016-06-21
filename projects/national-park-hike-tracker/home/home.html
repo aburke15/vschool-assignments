@@ -1,18 +1,44 @@
 <div class="container">
     <div class="row">
         <div class="center-block panel panel-default home-margin post-width">
-            <div class="panel-heading" ng-model="park.username">Panel heading</div>
+            <div class="panel-heading" ng-model="park.username"><input class="input" type="text" placeholder="Username" ng-model="park.username">  <input class="input" class="pull-right" type="text" placeholder="Password" ng-model="park.password"></div>
             <div class="panel-body">
-                <p ng-model="park.body">This is the description/body</p>
+                <textarea class="text-location" name="" id="" rows="2" placeholder="Say something" ng-model="park.body"></textarea>
             </div>
 
             <ul class="list-group from-group">
-               <li ng-show="" class="list-group-item">space</li>
-                <li ng-hide="" class="list-group-item"><textarea class="text-location" name="" id="" rows="1" placeholder="Location"></textarea></li>
-                <li ng-show="" class="list-group-item">space</li>
+               <li ng-show="location" class="list-group-item"><textarea class="text-location" name="" id="" rows="1" placeholder="Where is this?" ng-model="park.location"></textarea></li>
+                <li ng-show="length" class="list-group-item"><textarea class="text-location" name="" id="" rows="1" placeholder="Length of hike" ng-model="park.length"></textarea></li>
+                <li ng-show="images" class="list-group-item"><input type="file"></li>
                 <li class="list-group-item">
-                    <a href=""><span class="glyphicon glyphicon-map-marker"></a></span>
-                    <a href=""><span class="glyphicon glyphicon-picture"></span></a>
+                    <a href="" ng-click="isLocation(location)"><span title="Add location" class="glyphicon glyphicon-map-marker icons" ng-model="location"></span></a>
+                    <a href="" ng-click="isImages(images)"><span title="Add images" class="glyphicon glyphicon-picture icons" ng-model="images"></span></a>
+                    <a href="" ng-click="isLength(length)"><span title="Length of hike" class="glyphicon glyphicon-road icons" ng-model="length"></span></a>
+                    <button class="btn btn-primary pull-right" type="button" ng-click="addPark(park)">Post</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div ng-show="" class="container">
+    <div class="row">
+        <div class="center-block panel panel-default home-margin post-width">
+            <div class="panel-heading" ng-model="park.username"><input class="input" type="text" placeholder="Username" ng-model="park.username">  <input class="input" class="pull-right" type="text" placeholder="Password" ng-model="park.password"></div>
+            <div class="panel-body">
+                <textarea class="text-location" name="" id="" rows="2" placeholder="Say something" ng-model="park.body"></textarea>
+            </div>
+
+            <ul class="list-group from-group">
+               <li ng-show="location" class="list-group-item"><textarea class="text-location" name="" id="" rows="1" placeholder="Where is this?"></textarea></li>
+                <li ng-show="length" class="list-group-item"><textarea class="text-location" name="" id="" rows="1" placeholder="Length of hike"></textarea></li>
+                <li ng-show="images" class="list-group-item"><input class="input" type="file"></li>
+                <li class="list-group-item">
+                    <a href="" ng-click="isLocation(location)"><span title="Add location" class="glyphicon glyphicon-map-marker icons" ng-model="location"></span></a>
+                    <a href="" ng-click="isImages(images)"><span title="Add images" class="glyphicon glyphicon-picture icons" ng-model="images"></span></a>
+                    <a href="" ng-click="isLength(length)"><span title="Length of hike" class="glyphicon glyphicon-road icons" ng-model="length"></span></a>
+                    <button class="btn btn-primary pull-right" type="button" ng-click="addPark(park)">Post</button>
                 </li>
             </ul>
         </div>

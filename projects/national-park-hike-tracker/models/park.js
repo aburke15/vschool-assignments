@@ -1,8 +1,12 @@
 var mongoose = require("mongoose");
-var Schema = mongoose.Schema; 
+var Schema = mongoose.Schema;
 
 var parkSchema = new Schema({
     username: {
+        type: String,
+        required: true
+    },
+    password: {
         type: String,
         required: true
     },
@@ -26,16 +30,7 @@ var parkSchema = new Schema({
             date: {
                 type: Date,
                 default: Date.now
-            },
-            replies: [
-                {
-                    reply: String,
-                    date: {
-                        type: Date,
-                        default: Date.now
-                    }
-                }
-            ]
+            }
         }
     ],
     images: [
@@ -46,11 +41,11 @@ var parkSchema = new Schema({
                 default: Date.now
             },
             likes: {
-                type: Number, 
+                type: Number,
                 default: 0
             }
         }
     ]
 });
 
-module.exports = mongoose.model("Park", parkSchema); 
+module.exports = mongoose.model("Park", parkSchema);

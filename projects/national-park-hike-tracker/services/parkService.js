@@ -12,4 +12,10 @@ app.service("ParkService", ["$http", function($http) {
         });
     }
     
+    this.addPark = function(park) {
+        return $http.post(baseUrl, park).then(function(response) {
+            self.parkList.push(response.data); 
+        });
+    }
+    
 }]);
