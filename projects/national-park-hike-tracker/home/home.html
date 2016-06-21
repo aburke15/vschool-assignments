@@ -1,17 +1,19 @@
 <div class="container">
     <div class="row">
-        <div class="panel panel-default home-margin">
-            <div class="panel-heading">Panel heading</div>
+        <div class="center-block panel panel-default home-margin post-width">
+            <div class="panel-heading" ng-model="park.username">Panel heading</div>
             <div class="panel-body">
-                <p>This is the description/body</p>
+                <p ng-model="park.body">This is the description/body</p>
             </div>
-            
-            <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
+
+            <ul class="list-group from-group">
+               <li ng-show="" class="list-group-item">space</li>
+                <li ng-hide="" class="list-group-item"><textarea class="text-location" name="" id="" rows="1" placeholder="Location"></textarea></li>
+                <li ng-show="" class="list-group-item">space</li>
+                <li class="list-group-item">
+                    <a href=""><span class="glyphicon glyphicon-map-marker"></a></span>
+                    <a href=""><span class="glyphicon glyphicon-picture"></span></a>
+                </li>
             </ul>
         </div>
     </div>
