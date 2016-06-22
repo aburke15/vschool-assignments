@@ -1,15 +1,24 @@
 <div class="container">
     <div class="row">
         <div class="center-block panel panel-default home-margin post-width">
-            <div class="panel-heading" ng-model="park.username"><input class="input" type="text" placeholder="Username" ng-model="park.username">  <input class="input" class="pull-right" type="text" placeholder="Password" ng-model="park.password"></div>
+            <div class="panel-heading">
+                <input class="input" type="text" placeholder="Username" ng-model="park.username">
+                <input class="input pull-right" type="password" placeholder="Password" ng-model="park.password">
+            </div>
             <div class="panel-body">
                 <textarea class="text-location" name="" id="" rows="2" placeholder="Say something" ng-model="park.body"></textarea>
             </div>
 
             <ul class="list-group from-group">
-               <li ng-show="location" class="list-group-item"><textarea class="text-location" name="" id="" rows="1" placeholder="Where is this?" ng-model="park.location"></textarea></li>
-                <li ng-show="length" class="list-group-item"><textarea class="text-location" name="" id="" rows="1" placeholder="Length of hike" ng-model="park.length"></textarea></li>
-                <li ng-show="images" class="list-group-item"><input type="file"></li>
+                <li ng-show="parks.location" class="list-group-item">
+                    <textarea class="text-location" name="" id="" rows="1" placeholder="Where is this?" ng-model="park.location"></textarea>
+                </li>
+                <li ng-show="parks.length" class="list-group-item">
+                    <textarea class="text-location" name="" id="" rows="1" placeholder="Length of hike" ng-model="park.length"></textarea>
+                </li>
+                <li ng-show="parks.images" class="list-group-item">
+                    <div class="btn btn-primary btn-upload" upload-button url="/upload" on-success="onSuccess(response)">Upload</div>
+                </li>
                 <li class="list-group-item">
                     <a href="" ng-click="isLocation(location)"><span title="Add location" class="glyphicon glyphicon-map-marker icons" ng-model="location"></span></a>
                     <a href="" ng-click="isImages(images)"><span title="Add images" class="glyphicon glyphicon-picture icons" ng-model="images"></span></a>
@@ -22,23 +31,34 @@
 </div>
 
 
-<div ng-show="" class="container">
+<div class="container" ng-repeat="park in parks.parkList">
     <div class="row">
-        <div class="center-block panel panel-default home-margin post-width">
-            <div class="panel-heading" ng-model="park.username"><input class="input" type="text" placeholder="Username" ng-model="park.username">  <input class="input" class="pull-right" type="text" placeholder="Password" ng-model="park.password"></div>
+        <div class="center-block panel panel-default post-margin post-width">
+            <div class="panel-heading">
+                <h4>User: {{ park.username }}</h4>
+                <a href=""><span title="Delete" class="glyphicon glyphicon-remove pull-right remove"></span></a>
+                <a href=""><span title="Edit" class="glyphicon glyphicon-pencil pull-right"></span></a>
+                <input ng-show="" class="input" type="text" placeholder="Username" ng-model="park.username">
+                <input ng-show="" class="input" class="pull-right" type="text" placeholder="Password" ng-model="park.password">
+            </div>
             <div class="panel-body">
-                <textarea class="text-location" name="" id="" rows="2" placeholder="Say something" ng-model="park.body"></textarea>
+                <p>{{ park.body }}</p>
+                <textarea ng-show="" class="text-location" name="" id="" rows="2" placeholder="Say something" ng-model="park.body"></textarea>
             </div>
 
             <ul class="list-group from-group">
-               <li ng-show="location" class="list-group-item"><textarea class="text-location" name="" id="" rows="1" placeholder="Where is this?"></textarea></li>
-                <li ng-show="length" class="list-group-item"><textarea class="text-location" name="" id="" rows="1" placeholder="Length of hike"></textarea></li>
-                <li ng-show="images" class="list-group-item"><input class="input" type="file"></li>
                 <li class="list-group-item">
-                    <a href="" ng-click="isLocation(location)"><span title="Add location" class="glyphicon glyphicon-map-marker icons" ng-model="location"></span></a>
-                    <a href="" ng-click="isImages(images)"><span title="Add images" class="glyphicon glyphicon-picture icons" ng-model="images"></span></a>
-                    <a href="" ng-click="isLength(length)"><span title="Length of hike" class="glyphicon glyphicon-road icons" ng-model="length"></span></a>
-                    <button class="btn btn-primary pull-right" type="button" ng-click="addPark(park)">Post</button>
+                    <p>{{ park.location }}</p>
+                </li>
+                <li class="list-group-item">
+                    <p>{{ park.length }}</p>
+                </li>
+                <li  class="list-group-item">
+                    <p ng-repeat="img in park.images">{{ img }}</p>
+                </li>
+                <li class="list-group-item">
+                    <a href=""><span class="glyphicon glyphicon-triangle-top"></span></a><span>{{ park.votes }}</span>
+                    <span class="pull-right">{{ park.date }}</span> 
                 </li>
             </ul>
         </div>

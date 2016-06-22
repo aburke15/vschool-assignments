@@ -18,4 +18,22 @@ app.service("ParkService", ["$http", function($http) {
         });
     }
     
+    this.isLocation = function() {
+        self.location = true; 
+        self.images = false; 
+        self.length = false; 
+    }
+    
+    this.isImages = function() {
+        self.images = true;
+        self.location = false; 
+        self.length = false; 
+    }
+    
+    this.isLength = function() {
+        self.length = true; 
+        self.images = false; 
+        self.location = false; 
+    }
+    
 }]);

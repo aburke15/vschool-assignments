@@ -1,4 +1,4 @@
-var app = angular.module("nationalParkApp", ["ngRoute"]); 
+var app = angular.module("nationalParkApp", ["ngRoute", "lr.upload"]); 
 
 app.config(function($routeProvider) {
     $routeProvider

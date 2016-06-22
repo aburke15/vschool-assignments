@@ -20,6 +20,26 @@ textarea {
     box-shadow: none;
 }
 
+div>h4 {
+    display: inline; 
+}
+
+.title {
+    margin-top: 100px; 
+    color: indianred;
+    opacity: .8;
+    font-family: HorsebackSlab-Bold;
+    font-size: 70px; 
+}
+
+.remove {
+    margin-left: 8px;
+}
+
+.post-margin {
+    margin-top: 15px;
+}
+
 .input {
     margin-left: auto;
     margin-right: auto;
@@ -64,19 +84,19 @@ textarea {
     padding: 0px;
     margin-top: 25px;
     margin-bottom: 20px;
-    margin-right: 90px;
+    margin-right: 90px; 
 }
 
 .nav-style ul li {
     display: inline;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 20px; 
 }
 
 .nav-style ul li a {
     text-decoration: none;
-    color: floralwhite;
+    color: indianred;
 }
 
 .search {
@@ -91,7 +111,7 @@ textarea {
 }
 
 .home-margin {
-    margin-top: 150px;
+    margin-top: 40px;
     border-radius: 0px;
 }
 
@@ -101,7 +121,7 @@ textarea {
 
 .brand {
     float: left;
-    color: floralwhite;
+    color: indianred;
     display: inline;
 }
 
@@ -128,3 +148,5 @@ textarea {
         font-size: 14px;
     }
 }
+
+@import "bower_components/angular-upload/src/directives/btnUpload.less"; 
