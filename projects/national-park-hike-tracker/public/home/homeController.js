@@ -15,8 +15,8 @@ app.controller("HomeController", ["$scope", "ParkService", function($scope, Park
         ParkService.isLocation();  
     }
     
-    $scope.isImages = function() {
-        ParkService.isImages(); 
+    $scope.isImage = function() {
+        ParkService.isImage(); 
     }
     
     $scope.isLength = function() {

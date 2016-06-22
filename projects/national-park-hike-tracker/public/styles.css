@@ -137,6 +137,14 @@ div>h4 {
     color: #003114; 
 }
 
+.post-icons {
+    color: #003114;
+}
+
+.post-img {
+    display: inline;
+}
+
 @media (max-width: 765px) {
     .search {
         display: none;

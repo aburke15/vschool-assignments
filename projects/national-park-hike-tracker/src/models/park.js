@@ -6,10 +6,6 @@ var parkSchema = new Schema({
         type: String,
         required: true
     },
-    password: {
-        type: String,
-        required: true
-    },
     body: {
         type: String,
         required: true
@@ -33,19 +29,10 @@ var parkSchema = new Schema({
             }
         }
     ],
-    images: [
-        {
-            image: String,
-            date: {
-                type: Date,
-                default: Date.now
-            },
-            likes: {
-                type: Number,
-                default: 0
-            }
-        }
-    ]
+    image: {
+        type: String,
+        required: true
+    }
 });
 
 module.exports = mongoose.model("Park", parkSchema);
