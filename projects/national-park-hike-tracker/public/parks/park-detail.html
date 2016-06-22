@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="center-block panel panel-default post-margin post-width">
+            <div class="panel-heading">
+                <h4>user: {{ park.onePark.username }}</h4>
+                <a href="" ng-click="deletePark(park, $index)"><span title="Delete Post" class="glyphicon glyphicon-remove pull-right remove post-icons"></span></a>
+                <input ng-show="" class="input" type="text" placeholder="Username" ng-model="park.username">
+                <input ng-show="" class="input" class="pull-right" type="text" placeholder="Password" ng-model="park.password">
+            </div>
+            <div class="panel-body">
+                <h5>{{ park.onePark.body }}</h5>
+                <textarea ng-show="" class="text-location" name="" id="" rows="2" placeholder="Say something" ng-model="park.body"></textarea>
+            </div>
+
+            <ul class="list-group from-group">
+                <li class="list-group-item">
+                    <span title="Location" class="glyphicon glyphicon-map-marker"></span>
+                    <p class="text-center post-img">     {{ park.onePark.location }}</p>
+                </li>
+                <li class="list-group-item">
+                    <span title="Length of hike" class="glyphicon glyphicon-road"></span>
+                    <p class="text-center post-img">     {{ park.onePark.length }} miles</p>
+                </li>
+                <li class="list-group-item">
+                    <img title="Image" class="img-responsive center-block" ng-src="{{ park.onePark.image }}" height="200px" width="300px" alt="">
+                </li>
+                <li class="list-group-item">
+                    <span>Likes </span>
+                    <a href="" ng-click="like()"><span title="Like" class="glyphicon glyphicon-hand-up"></span></a> <span>{{ park.onePark.likes }}</span>
+                    <span class="pull-right">{{ park.onePark.date }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

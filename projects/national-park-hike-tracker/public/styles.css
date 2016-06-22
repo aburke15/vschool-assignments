@@ -24,6 +24,10 @@ div>h4 {
     display: inline; 
 }
 
+h5 {
+    font-size: 20px; 
+}
+
 .title {
     margin-top: 100px; 
     color: indianred;
@@ -142,7 +146,32 @@ div>h4 {
 }
 
 .post-img {
-    display: inline;
+    display: inline; 
+}
+
+.img-margin {
+    margin-bottom: 15px;
+}
+
+.img-top {
+    margin-top: 60px;
+}
+
+.list-img {
+    list-style-type: none;
+}
+
+.list-img ul {
+    padding: 0px;
+}
+
+.list-img img {
+    border: 1px solid black;
+}
+
+.list-img li:hover {
+    opacity: .8;
+    cursor: pointer;
 }
 
 @media (max-width: 765px) {

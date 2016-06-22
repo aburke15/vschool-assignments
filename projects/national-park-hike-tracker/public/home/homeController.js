@@ -11,16 +11,12 @@ app.controller("HomeController", ["$scope", "ParkService", function($scope, Park
         });
     }
     
-    $scope.isLocation = function() {
-        ParkService.isLocation();  
+    $scope.deletePark = function(park, index) {
+        ParkService.deletePark(park, index).then(function(response) {});
     }
     
-    $scope.isImage = function() {
-        ParkService.isImage(); 
-    }
-    
-    $scope.isLength = function() {
-        ParkService.isLength();  
+    $scope.like = function() {
+        ParkService.like().then(function(response) {});
     }
     
 }]);

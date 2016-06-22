@@ -1,0 +1,9 @@
+<div class="container img-top">
+    <div class="row">
+        <ul class="list-img">
+            <li ng-repeat="park in parks.parkList" class="col-lg-4 col-md-4 col-sm-6 col-xs-12 img-margin">
+                <a href="#/parks/{{ park._id }}"><img class="" ng-src="{{ park.image }}" height="200px" width="300px;" alt=""></a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -9,19 +9,19 @@
             </div>
 
             <ul class="list-group from-group">
-                <li ng-show="parks.location" class="list-group-item">
+                <li ng-show="toggle === 'location'" class="list-group-item">
                     <textarea class="text-location" name="" id="" rows="1" placeholder="Where is this?" ng-model="park.location"></textarea>
                 </li>
-                <li ng-show="parks.length" class="list-group-item">
+                <li ng-show="toggle === 'length'" class="list-group-item">
                     <textarea class="text-location" name="" id="" rows="1" placeholder="Length of hike" ng-model="park.length"></textarea>
                 </li>
-                <li ng-show="parks.image" class="list-group-item">
+                <li ng-show="toggle === 'image'" class="list-group-item">
                     <textarea class="text-location" name="" id="" rows="1" placeholder="Image URL" ng-model="park.image"></textarea>
                 </li>
                 <li class="list-group-item">
-                    <a href="" ng-click="isLocation(location)"><span title="Add location" class="glyphicon glyphicon-map-marker icons" ng-model="location"></span></a>
-                    <a href="" ng-click="isImage(image)"><span title="Add an image" class="glyphicon glyphicon-picture icons" ng-model="image"></span></a>
-                    <a href="" ng-click="isLength(length)"><span title="Length of hike" class="glyphicon glyphicon-road icons" ng-model="length"></span></a>
+                    <a href="" ng-click="toggle = 'location'"><span title="Add location" class="glyphicon glyphicon-map-marker icons"></span></a>
+                    <a href="" ng-click="toggle = 'image'"><span title="Add an image" class="glyphicon glyphicon-picture icons"></span></a>
+                    <a href="" ng-click="toggle = 'length'"><span title="Length of hike" class="glyphicon glyphicon-road icons"></span></a>
                     <button class="btn btn-primary pull-right" type="button" ng-click="addPark(park)">Post</button>
                 </li>
             </ul>
@@ -30,32 +30,35 @@
 </div>
 
 
-<div class="container" ng-repeat="park in parks.parkList">
+<div class="container" ng-repeat="park in parks.parkList track by $index">
     <div class="row">
         <div class="center-block panel panel-default post-margin post-width">
             <div class="panel-heading">
                 <h4>user: {{ park.username }}</h4>
-                <a href="" ng-click="deletePark(park, $index)"><span title="Delete Post" class="glyphicon glyphicon-remove pull-right remove post-icons"></span></a>                <input ng-show="" class="input" type="text" placeholder="Username" ng-model="park.username">
+                <a href="" ng-click="deletePark(park, $index)"><span title="Delete Post" class="glyphicon glyphicon-remove pull-right remove post-icons"></span></a>
+                <input ng-show="" class="input" type="text" placeholder="Username" ng-model="park.username">
                 <input ng-show="" class="input" class="pull-right" type="text" placeholder="Password" ng-model="park.password">
             </div>
             <div class="panel-body">
-                <p>{{ park.body }}</p>
+                <h5>{{ park.body }}</h5>
                 <textarea ng-show="" class="text-location" name="" id="" rows="2" placeholder="Say something" ng-model="park.body"></textarea>
             </div>
 
             <ul class="list-group from-group">
                 <li class="list-group-item">
-                    <p>{{ park.location }}</p>
+                    <span title="Location" class="glyphicon glyphicon-map-marker"></span>
+                    <p class="text-center post-img">     {{ park.location }}</p>
                 </li>
                 <li class="list-group-item">
-                    <p>{{ park.length }} miles</p>
+                    <span title="Length of hike" class="glyphicon glyphicon-road"></span>
+                    <p class="text-center post-img">     {{ park.length }} miles</p>
                 </li>
                 <li class="list-group-item">
-                    <img class="center-block" ng-src="{{ park.image }}" height="200px" width="300px" alt="">
+                    <img title="Image" class="img-responsive center-block" ng-src="{{ park.image }}" height="200px" width="300px" alt="">
                 </li>
                 <li class="list-group-item">
                     <span>Likes </span>
-                    <a href="" ng-click="like()"><span title="Like" class="glyphicon glyphicon-triangle-top"></span></a> <span>{{ park.likes }}</span>
+                    <a href="" ng-click="like()"><span title="Like" class="glyphicon glyphicon-hand-up"></span></a> <span>{{ park.likes }}</span>
                     <span class="pull-right">{{ park.date }}</span>
                 </li>
             </ul>
