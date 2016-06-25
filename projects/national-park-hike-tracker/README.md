@@ -40,3 +40,10 @@ interesting and useful application in such a short amount of time.
 How To
 ======
 
+Enter in a username, body/description, location, length of your hike, and an image URL hit 
+
+post and boom, your hike information will be instantly tracked and kept in the database 
+
+if you hit the "x" in the top right corner of the post you can delete your post. Clicking the 
+
+images section at the top of the page will display all of the images everyone else has posted
