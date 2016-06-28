@@ -34,11 +34,11 @@ app.service("ParkService", ["$http", function ($http) {
         });
     }
     
-    this.like = function() {
-        return $http.get("")
-        var likes = 0: 
-        likes++;
-        
-    }
+//    this.like = function() {
+//        return $http.get("")
+//        var likes = 0: 
+//        likes++;
+//        
+//    }
 
 }]);
