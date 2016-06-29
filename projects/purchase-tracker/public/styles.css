@@ -1,5 +1,5 @@
 body {
-    background-color: lightgray; 
+    background-color: black; 
 }
 
 .container-fluid {
@@ -10,4 +10,20 @@ body {
 .home-btn {
     min-width: 300px;
     width: 40%;
+}
+
+.navbar {
+    background-color: #353A3D;
+}
+
+.well {
+    background-color: darkgray; 
+}
+
+.jumbotron {
+    background-color: darkgray; 
+}
+
+.color {
+    color: white;
 }

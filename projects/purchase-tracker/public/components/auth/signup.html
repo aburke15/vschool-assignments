@@ -7,32 +7,27 @@
                     <label>First Name</label>
                     <input type="text" class="form-control" ng-model="user.firstName">
                 </div>
-                <br>
-                
+                <br>             
                 <div class="control-group">
                     <label>Last Name</label>
                     <input type="text" class="form-control" ng-model="user.lastName">
                 </div>
                 <br>
-
                 <div class="control-group">
                     <label>Username</label>
                     <input type="text" class="form-control" ng-model="user.username">
                 </div>
                 <br>
-
                 <div class="control-group">
                     <label>Password</label>
                     <input type="password" class="form-control" ng-model="user.password">
                 </div>
                 <br>
-
                 <div class="control-group">
                     <label>Repeat Password</label>
                     <input type="password" class="form-control" ng-model="passwordRepeat">
                     <span class="text-danger" ng-show="passwordMessage">{{ passwordMessage }}</span>
                 </div>
-
                 <br>
                 <button class="center-block btn btn-primary btn-lg" ng-click="signup(user)">Signup</button>
             </form>
