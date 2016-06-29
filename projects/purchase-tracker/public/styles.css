@@ -3,7 +3,8 @@ body {
 }
 
 .container-fluid {
-    border-radius: 0px; 
+    border-radius: 0px;
+    width: 100%;
 }
 
 .home-btn {
