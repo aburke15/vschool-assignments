@@ -10,11 +10,11 @@ app.config(function ($routeProvider) {
             controller: "PurchaseController"
         })
         .when("/signup", {
-            templateUrl: "components/signup/signup.html",
+            templateUrl: "components/auth/signup.html",
             controller: "SignupController"
         })
         .when("/login", {
-            templateUrl: "components/login/login.html",
+            templateUrl: "components/auth/login.html",
             controller: "LoginController"
         })
         .when("/logout", {
