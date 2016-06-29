@@ -33,9 +33,13 @@ purchaseRouter.route("/:id")
         });
     })
     .delete(function(req, res) {
-        Purchase.findOneAndDelete({_id: req.params.id, user: req.user._id}, function(err, purchase) {
+        Purchase.findOneAndRemove({_id: req.params.id, user: req.user._id}, function(err, purchase) {
             if (err) res.status(500).send(err); 
-            else res.send(purchase); 
+            else var response = {
+                purchase: purchase,
+                message: "Item successfully deleted"
+            }
+            res.send(response); 
         });
     }); 
 

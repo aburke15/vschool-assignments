@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
 
-        <form class="col-md-4 well col-md-offset-4" name="purchaseForm" novalidate>
+        <form class="col-md-5 well" name="purchaseForm" novalidate>
             <h1 class="text-center">Track a new Purchase!</h1>
             <div class="form-group">
                 <label for="title">Title</label>
@@ -19,38 +19,34 @@
                 <label for="description">Description</label>
                 <textarea class="form-control" name="description" id="description" ng-model="purchase.description"></textarea>
             </div>
-            <button ng-click="addPurchase(purchase)" class="btn btn-success"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+            <button ng-click="addPurchase(purchase)" class="btn btn-success glyphicon glyphicon-plus center-block"></button>
         </form>
-    </div>
-    
-    <section class="row">
+        
         <div>
-            <h1 class="text-center col-md-4 col-md-offset-4 color">{{ purchase.total + purchase.price | currency }}</h1>
+            <h1 class="text-center col-md-5 col-md-offset-1 color">Total: {{ getTotal() | currency }}</h1>
         </div>
-    </section>
+    </div>
 
     <section class="row">
         <div class="col-md-4" ng-repeat="purchase in purchaseList track by $index">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <a href=""><span ng-click="deletePurchase($index, purchase)" class="pull-right glyphicon glyphicon-remove"></span></a>
+                    <a href="" ng-click="deletePurchase($index, purchase)"><span class="pull-right glyphicon glyphicon-remove"></span></a>
                     <h4 ng-class="{ 'paid text-muted' : purchase.paid }">{{ purchase.title }}</h4>
                 </div>
                 <div class="panel-body">
                     <img class="center-block" ng-src="{{ purchase.image }}" height="100px" width="125px" alt="Image">
                 </div>
                 <div class="panel-body">
-                    <div class="pull-left">
+                    <div>
                         <p ng-class="{ 'paid text-muted' : purchase.paid }">{{ purchase.description }}</p>
                     </div>
+                    <br>
                     <div>
                         <p ng-class="{ 'paid text-muted' : purchase.paid }">{{ purchase.price | currency }}</p>
                     </div>
                     <div>
-                        <p>{{ today | date : 'short' }}</p>
-                    </div>
-                    <div class="checkbox pull-right">
-                        <input type="checkbox" ng-model="purchase.paid">
+                        <p>{{ date | date : 'short' }}</p>
                     </div>
                 </div>
             </div>
