@@ -18,7 +18,10 @@ app.config(function ($routeProvider) {
             controller: "LoginController"
         })
         .when("/logout", {
-            templateUrl: "",
+            template: "",
             controller: "LogoutController"
+        })
+        .otherwise({
+            redirectTo: "/"
         });
 });
