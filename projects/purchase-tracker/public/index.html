@@ -11,16 +11,17 @@
 </head>
 
 <body>
-    <header>
-        <navbar></navbar>
-    </header>
+    <navbar></navbar>
 
     <main>
         <div ng-view=""></div>
     </main>
 
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
     <script src="app.js"></script>
     <script src="components/controllers/purchases.js"></script>
     <script src="components/auth/auth.js"></script>
@@ -29,7 +30,10 @@
     <script src="components/controllers/signup.js"></script>
     <script src="components/controllers/login.js"></script>
     <script src="components/controllers/logout.js"></script>
+    <script src="components/services/userService.js"></script>
     <script src="components/services/purchaseService.js"></script>
+    <script src="components/services/tokenService.js"></script>
+    
 
 </body>
 

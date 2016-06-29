@@ -1,4 +1,4 @@
-var app = angular.module("newApp");
+var app = angular.module("purchaseApp.Auth");
 
 app.directive("navbar", ["UserService", function(UserService) {
     return {

@@ -1,10 +1,9 @@
-var app = angular.module("purchaseApp", ["ngRoute"]);
+var app = angular.module("purchaseApp", ["ngRoute", "purchaseApp.Auth"]);
 
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
-            templateUrl: "components/home/home.html",
-            controller: "HomeController"
+            templateUrl: "components/home/home.html"
         })
         .when("/purchases", {
             templateUrl: "components/purchases/purchases.html",

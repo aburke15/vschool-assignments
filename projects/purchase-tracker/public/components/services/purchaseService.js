@@ -10,9 +10,11 @@ app.service("PurchaseService", ["$http", function($http) {
         });
     }
     
-    this.addPurchases = function(purchase) {
+    this.addPurchase = function(purchase) {
         return $http.post("/api/purchases", purchase).then(function(response) {
             self.purchaseList.push(response.data); 
+        }, function(response) {
+            alert("Error " + response.status + ": " + response.statusText);
         });
     }
 }]);
