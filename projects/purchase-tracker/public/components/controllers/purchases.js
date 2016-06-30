@@ -2,13 +2,11 @@ var app = angular.module("purchaseApp");
 
 app.controller("PurchaseController", ["$scope", "PurchaseService", function ($scope, PurchaseService) {
     $scope.purchases = PurchaseService;
-    $scope.purchaseList = [];
-    $scope.date = new Date(); 
+    $scope.purchaseList = []; 
 
 
     PurchaseService.getPurchases().then(function (purchases) {
         $scope.purchaseList = purchases;
-        console.log(purchases);
     });
 
 

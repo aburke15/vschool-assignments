@@ -1,6 +1,5 @@
 <div class="container">
     <div class="row">
-
         <form class="col-md-5 well" name="purchaseForm" novalidate>
             <h1 class="text-center">Track a new Purchase!</h1>
             <div class="form-group">
@@ -20,10 +19,9 @@
                 <textarea class="form-control" name="description" id="description" ng-model="purchase.description"></textarea>
             </div>
             <button ng-click="addPurchase(purchase)" class="btn btn-success glyphicon glyphicon-plus center-block"></button>
-        </form>
-        
+        </form>  
         <div>
-            <h1 class="text-center col-md-5 col-md-offset-1 color">Total: {{ getTotal() | currency }}</h1>
+            <h1 class="text-center well col-md-5 col-md-offset-1">Total: {{ getTotal() | currency }}</h1>
         </div>
     </div>
 
@@ -46,7 +44,7 @@
                         <p ng-class="{ 'paid text-muted' : purchase.paid }">{{ purchase.price | currency }}</p>
                     </div>
                     <div>
-                        <p>{{ date | date : 'short' }}</p>
+                        <p>{{ purchase.date | date : 'short' }}</p>
                     </div>
                 </div>
             </div>

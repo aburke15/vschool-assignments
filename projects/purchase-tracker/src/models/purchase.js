@@ -14,7 +14,8 @@ var purchaseSchema = new Schema({
         type: String
     },
     date: {
-        type: Date
+        type: Date,
+        default: Date.now
     },
     description: String,
     paid: {
