@@ -1,0 +1,28 @@
+<div class="center-block top-margin">
+    <div class="row">
+        <div>
+            <h3 class="text-center">{{ weather.title }}</h3>
+        </div>
+        <div>
+            <h4 class="text-center">{{ weather.conditions }}</h4>
+        </div>
+        <div>
+            <img class="center-block img-responsive" ng-src="{{ icon }}" height="100px" width="100px" alt="">
+        </div>
+        <div>
+            <h3 class="text-center">{{ weather.temperature }}</h3>
+        </div>
+        <div>
+            <h5 class="text-center">{{ weather.humidity }}</h5>
+        </div>
+        <div>
+            <h5 class="text-center">{{ weather.sunrise }}</h5>
+        </div>
+        <div>
+            <h5 class="text-center">{{ weather.sunset }}</h5>
+        </div>
+        <div>
+            <button ng-click="getForecast()" type="button" class="btn btn-primary center-block btn-margin">10 Day Forecast</button>
+        </div>
+    </div>
+</div>

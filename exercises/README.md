@@ -1,10 +1,14 @@
-Exercises  
+V School Assignments
 ====================
 
-The warmups folder is a collection of the warmups we completed in class at V School.
+This is the main README file for all of my assignments from V School. 
 
-The purpose of warmups is to review and practice past material and prime us for learning new topics. 
+Each of the directories in this directory represents a warmup (daily, short practices),
 
-Warmups are typically either quick problem-solving puzzles or small projects, and are usually 
+exercise (completed immediately after learning a new topic), or a project (used to test my ability 
 
-completed within about 30 minutes or less.
+in given areas of development) that I've worked on during my time here. Each of these assignments 
+
+has a README file that explains the assignment given as well as a summary of what
+
+I learned by completing the assignment.

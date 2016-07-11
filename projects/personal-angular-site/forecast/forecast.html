@@ -1,0 +1,23 @@
+<div class="center-block top-margin">
+    <div class="row">
+        <h3 class="text-center">{{ weather.tenDayTitle }}</h3>
+    </div>
+    <div class="container top-margin">
+        <table class="table table-bordered table-hover table-striped">
+           <thead>
+               <th>{{ weather.days }}</th>
+               <th>{{ weather.date }}</th>
+               <th>{{ weather.high }}</th>
+               <th>{{ weather.low }}</th>
+               <th>{{ weather.condition }}</th>
+           </thead>
+            <tr ng-repeat="day in weather.forecastList">
+                <td>{{ day.day }}</td>
+                <td>{{ day.date }}</td>
+                <td>{{ day.high | temperature }}</td>
+                <td>{{ day.low | temperature }}</td>
+                <td>{{ day.text }}</td>
+            </tr>
+        </table>
+    </div>
+</div>

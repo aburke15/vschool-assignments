@@ -1,14 +1,14 @@
 function isPalindrome(string) {
-    var plainString = string.toLowerCase().replace(/[^\w]/g, ""); 
+    var plainString = string.toLowerCase().replace(/[^\w]/g, "");
     if (reverser(plainString) === plainString) {
         return string + ": is a palindrome.";
     } else {
-        return string + ": is not a palindrome."; 
+        return string + ": is not a palindrome.";
     }
 }
 
-function reverser(word) {
-    return word.split("").reverse().join("");
+function reverser(string) {
+    return string.split("").reverse().join("");
 }
 
 console.log(isPalindrome("Taco cat"));
@@ -18,5 +18,5 @@ console.log();
 console.log(isPalindrome("bob"));
 console.log();
 console.log(isPalindrome("Apple"));
-console.log(); 
-console.log(isPalindrome("Hannnnnnnnah")); 
+console.log();
+console.log(isPalindrome("Hannnnnnnnah"));
